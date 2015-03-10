@@ -1,0 +1,26 @@
+	p {font-family:"Comic Sans MS";}
+
+	#slideshow {
+	opacity:0;
+	-webkit-transition:opacity 1.0s linear 0s;
+	transition:opacity 1.0s linear 0s;
+	}
+
+	body {
+  	background-color: #000000;
+  	font-family: "Arial Black", Helvetica, sans-serif;
+  	color: black;
+	}
+
+	#moshitime {
+	font-size: 120;
+	color: #88bb44;
+	padding-bottom: 0px;
+	}
+
+
+	#ampm {
+	font-size: 17;
+	color: #88bb44;
+	padding-bottom: 0px;
+	}

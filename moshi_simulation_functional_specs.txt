@@ -1,0 +1,36 @@
+moshi simulation
+------------------------
+this website is going to simulate moshi with almost all the commands from the original clock. 
+
+
+features
+-----------------
+clock
+alternates between 6 colors:
+blue(1a0aff), cyan(00ffff), green(00ff55), yellow(a8ff64), red(de0614), purple(a806de)
+
+accepts commands:
+[alarm]
+shows you the time the alarm is currently set to (hh:mm)in a dialog box and waits for ok to be clicked
+
+[set alarm]
+pop up a dialog box that asks you when you want the alarm to sound and waits for input in the form of hh:mm
+
+[alarm sound]
+it will offer three alarm sounds and will play what each one sounds like. After you type it in, it will play it once.
+
+[play sleep sound]
+it will play the sleep sound selected for 5 min.
+
+[sleep sound]
+it will offer three sleep sounds to choose from and play what each one sounds like. After you type it in, it will play it once.
+
+[temperature]
+display the outside temperature in Estes Park. the data is going to come from wunderground.com. It will be displayed using a modified widget from wunderground. in the simulated display, it will show blue 59F and below, cyan 60-69F, green 70-89F, red 90F and above while displaying the temperature.
+
+[today's date]
+it will pop up a dialog box for the date
+
+[cancel]
+if you decide not to say a command/is accidentally activated, you type cancel and then you won't have to do anything then.
+

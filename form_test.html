@@ -23,12 +23,7 @@ function showPopup(w,h){
    popUp.style.width = w + "px";
    popUp.style.height = h + "px";
 
-   if (baseText == null) baseText = popUp.innerHTML;
-   popUp.innerHTML = baseText +
-      "<center><div id=\"statusbar\"><button onclick=\"hidePopup();\">CANCEL</button></div></center>";
-
-   var sbar = document.getElementById("statusbar");
-   sbar.style.marginTop = (parseInt(h)-40) + "px";
+   
    popUp.style.visibility = "visible";
 }
 

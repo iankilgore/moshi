@@ -1,0 +1,6 @@
+blue: red=2.13V green=2.05V blue=3.3V
+cyan: red=0V green=3.3V blue=3.3V
+green: red=0V green=3.3V blue=2.4333...V
+yellow: red=2.856V green=3.3V blue=2.51V
+red: red=3.13V green=2.03V blue=2.10V
+purple: red=2.856V green=2.03V blue=3.13V

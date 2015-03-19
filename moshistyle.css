@@ -1,11 +1,5 @@
 	p {font-family:"Comic Sans MS";}
 
-	#slideshow {
-	opacity:0;
-	-webkit-transition:opacity 1.0s linear 0s;
-	transition:opacity 1.0s linear 0s;
-	}
-
 	body {
   	background-color: #000000;
   	font-family: "Arial Black", Helvetica, sans-serif;

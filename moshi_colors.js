@@ -1,13 +1,12 @@
 var slide_counter = 0;
 var slide_array = [
-"<style>body {background-color: #ff0000;}</style>",
-"<style>body {background-color: #00ff00;}</style>",
-"<style>body {background-color: #0000ff;}</style>",
-"<style>body {background-color: #ffff00;}</style>",
-"<style>body {background-color: #ff00ff;}</style>",
-"<style>body {background-color: #000000;}</style>",
-"<style>body {background-color: #ffffff;}</style>",
+"<style>body {background-color: #1a0aff;}</style>",
 "<style>body {background-color: #00ffff;}</style>",
+"<style>body {background-color: #00ff55;}</style>",
+"<style>body {background-color: #a8ff64;}</style>",
+"<style>body {background-color: #de0614;}</style>",
+"<style>body {background-color: #a806de;}</style>",
+<!--"<style>body {background-color: #605a39;}</style>",--!>
 ];
 
 var slide_element;

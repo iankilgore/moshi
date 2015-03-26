@@ -6,7 +6,7 @@ var slide_array = [
 "<style>body {background-color: #a8ff64;}</style>",
 "<style>body {background-color: #de0614;}</style>",
 "<style>body {background-color: #a806de;}</style>",
-<!--"<style>body {background-color: #605a39;}</style>",--!>
+"<style>body {background-color: #605a39;}</style>",
 ];
 
 var slide_element;

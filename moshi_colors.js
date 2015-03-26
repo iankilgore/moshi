@@ -6,18 +6,43 @@ var slide_array = [
 "<style>body {background-color: #a8ff64;}</style>",
 "<style>body {background-color: #de0614;}</style>",
 "<style>body {background-color: #a806de;}</style>",
-"<style>body {background-color: #605a39;}</style>",
+// "<style>body {background-color: #605a39;}</style>",
 ];
 
 var slide_element;
+var offon;
+
 function Next(){
+	if (offon=="on") {
 	slide_counter++;
 	if(slide_counter > (slide_array.length - 1)){
 		slide_counter = 0;
 	}
 	setTimeout('switchSlide()',1000);
+	}
 }
+
 function switchSlide(){
+	if (offon=="on") {
 	slide_element.innerHTML = slide_array[slide_counter];
 	setTimeout('Next()',2000);
+	}
+if (offon=="off") {
+	slide_counter = 0;
+	slide_element.innerHTML = "<style>body {background-color: #605a39;}</style>"
+	OffNightLight();
+		  }
 }
+
+function nightlight(){
+	offon="on";
+	slide_element = document.getElementById("nightlight");
+	switchSlide();
+
+}
+
+function OffNightLight(){
+	offon="off";
+	slide_element.innerHTML = "<style>body {background-color: #605a39;}</style>"
+	return;
+} 

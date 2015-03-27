@@ -43,6 +43,7 @@ function nightlight(){
 
 function OffNightLight(){
 	offon="off";
+	slide_counter = 0;
 	slide_element.innerHTML = "<style>body {background-color: #605a39;}</style>"
 	return;
-} 
+}

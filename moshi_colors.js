@@ -35,10 +35,11 @@ if (offon=="off") {
 }
 
 function nightlight(){
+	if (offon != "on") {
 	offon="on";
 	slide_element = document.getElementById("nightlight");
 	switchSlide();
-
+	}
 }
 
 function OffNightLight(){

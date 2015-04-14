@@ -28,10 +28,8 @@
 	#popupcontent{
 	   visibility: hidden;
 	   overflow: hidden;
-	   border:1px solid;
 	   background-color:#05dff8;
-	   border:1px solid;
-	   padding:5px;
+	   border: none;
 	}
 
 	a:link {
@@ -46,6 +44,5 @@
 	    color: #FF00FF;
 	}
 table {
-    color: white;
-    border: solid blue;
+    border: none;
 }

@@ -1,4 +1,38 @@
+function moshicommand(){
+var newcommand=document.getElementById("commands").value;
 
+switch(newcommand){
+case "time":
+	alert (newcommand);
+	break;
+case "alarm":
+	alert (newcommand);
+	break;
+case "setalarm":
+	alert (newcommand);
+	break;
+case "alarmsound":
+	alert (newcommand);
+	break;
+case "sleepsound":
+	alert (newcommand);
+	break;
+case "playsleepsound":
+	alert (newcommand);
+	break;
+case "moshidate":
+	alert (newcommand);
+	break;
+case "temperature":
+	alert (newcommand);
+	break;
+case "nightlight":
+	nightlight();
+	break;
+}
+
+
+}
   function showPopup(w,h){
      var popUp = document.getElementById("popupcontent");
 

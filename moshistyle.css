@@ -32,6 +32,13 @@
 	   border: none;
 	}
 
+	#moshidate {
+		visibility: hidden;
+		overflow: hidden;
+		background-color:#05dff8;
+		border: none;
+	}
+
 	a:link {
 	    color: #00FFFF;
 	}

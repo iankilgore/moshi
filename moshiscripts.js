@@ -4,37 +4,53 @@ var newcommand=document.getElementById("commands").value;
 switch(newcommand){
 case "time":
 	alert (newcommand);
+	hidePopUpWindow('popupcontent');
 	break;
 case "alarm":
 	alert (newcommand);
+	hidePopUpWindow('popupcontent');
 	break;
 case "setalarm":
 	alert (newcommand);
+	hidePopUpWindow('popupcontent');
 	break;
 case "alarmsound":
 	alert (newcommand);
+	hidePopUpWindow('popupcontent');
 	break;
 case "sleepsound":
 	alert (newcommand);
+	hidePopUpWindow('popupcontent');
 	break;
 case "playsleepsound":
 	alert (newcommand);
+	hidePopUpWindow('popupcontent');
 	break;
 case "moshidate":
-	alert (newcommand);
+	d = new Date();
+	alert (d.toDateString());
+	hidePopUpWindow('popupcontent');
 	break;
 case "temperature":
 	alert (newcommand);
+	hidePopUpWindow('popupcontent');
 	break;
 case "nightlight":
 	nightlight();
+	hidePopUpWindow('popupcontent');
 	break;
 }
 
-
 }
-  function showPopup(w,h){
-     var popUp = document.getElementById("popupcontent");
+
+  function hidePopUpWindow(PopName){
+     var popUp = document.getElementById(PopName.toString());
+     popUp.style.visibility = "hidden";
+		 document.getElementById("commands").value=null;
+  }
+
+	function showNewPopUpWindow(w,h,PopName){
+     var popUp = document.getElementById(PopName.toString());
 
      popUp.style.top = "200px";
      popUp.style.left = "200px";
@@ -43,11 +59,6 @@ case "nightlight":
 
 
      popUp.style.visibility = "visible";
-  }
-
-  function hidePopup(){
-     var popUp = document.getElementById("popupcontent");
-     popUp.style.visibility = "hidden";
   }
 
 
@@ -81,3 +92,5 @@ case "nightlight":
   		}
 		return i;
 		}
+
+		

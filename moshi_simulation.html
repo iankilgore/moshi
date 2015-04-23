@@ -16,11 +16,12 @@
 
   </head>
   <body onload="startTime()">
+
     <table width=100% height=100% cellpadding=0 cellspacing=0>
       <tr>
         <td valign=top>
 <div id="nightlight"></div>
-    <a href="#" onclick="showPopup(300,100);" >Hello, Moshi.</a>
+    <a href="#" onclick="commandPlease.play(); showNewPopUpWindow(300,100,'popupcontent');" >Hello, Moshi.</a>
 
 
 <a href="#" onclick="OffNightLight();" >Night Light Off</a>
@@ -54,7 +55,10 @@
             <option value="nightlight">Night Light</option>
           </select>
         </p>
-          <center><button onclick="hidePopup();">CANCEL</button></center>
+          <center><button onclick="hidePopUpWindow('popupcontent');">CANCEL</button></center>
+          <audio id="myAudio">
+          <source src="command_please.wav" type="audio/wav">
+          </audio>
         </div>
 			</td>
 		</tr>
@@ -64,6 +68,12 @@
 </td>
 </tr>
 </table>
+<script>
+var commandPlease = document.getElementById("myAudio");
+
+</script>
+<div id="moshidate"></div>
   </body>
+
 
 </html>

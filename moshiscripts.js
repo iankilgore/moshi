@@ -27,9 +27,11 @@ case "playsleepsound":
 	hidePopUpWindow('popupcontent');
 	break;
 case "moshidate":
-	d = new Date();
-	alert (d.toDateString());
+//	d = new Date();
+	//alert (d.toDateString());
+	showmoshidate();
 	hidePopUpWindow('popupcontent');
+	//
 	break;
 case "temperature":
 	alert (newcommand);
@@ -42,7 +44,12 @@ case "nightlight":
 }
 
 }
+function showmoshidate()
+{
+	d = new Date();
+	showNewPopUpWindow (200, 200, 'moshidate')
 
+}
   function hidePopUpWindow(PopName){
      var popUp = document.getElementById(PopName.toString());
      popUp.style.visibility = "hidden";
@@ -92,5 +99,3 @@ case "nightlight":
   		}
 		return i;
 		}
-
-		

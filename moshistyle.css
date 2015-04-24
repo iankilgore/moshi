@@ -1,5 +1,11 @@
 	p {font-family:"Comic Sans MS";}
+	p.pos_fixed {
+	    position: relative;
 
+	    right: 5px;
+	    color: red;
+
+	}
 	body {
   	background-color: #605a39;
   	font-family: "Arial Black", Helvetica, sans-serif;
@@ -33,6 +39,7 @@
 	}
 
 	#moshidate {
+		position: absolute;
 		visibility: hidden;
 		overflow: hidden;
 		background-color:#05dff8;

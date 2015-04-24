@@ -42,7 +42,7 @@ case "nightlight":
 }
 
 }
-
+ 
 function showmoshidate()
 {
 	d = new Date();

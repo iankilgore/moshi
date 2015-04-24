@@ -27,7 +27,9 @@ case "playsleepsound":
 	hidePopUpWindow('popupcontent');
 	break;
 case "moshidate":
-	showMoshiDate();
+//	d = new Date();
+	//alert (d.toDateString());
+	showmoshidate();
 	hidePopUpWindow('popupcontent');
 	//
 	break;
@@ -42,7 +44,6 @@ case "nightlight":
 }
 
 }
- 
 function showmoshidate()
 {
 	d = new Date();

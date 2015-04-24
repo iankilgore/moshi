@@ -1,62 +1,62 @@
-	p {font-family:"Comic Sans MS";}
-	p.pos_fixed {
-	    position: relative;
+p {font-family:"Comic Sans MS";}
+p.pos_fixed {
+		position: relative;
 
-	    right: 5px;
-	    color: red;
+		right: 5px;
+		color: red;
 
-	}
-	body {
-  	background-color: #605a39;
-  	font-family: "Arial Black", Helvetica, sans-serif;
-  	color: black;
-	}
+}
+body {
+	background-color: #605a39;
+	font-family: "Arial Black", Helvetica, sans-serif;
+	color: black;
+}
 
-	#moshitime {
-		font-family:"Impact";
-	align:"center";
-	font-size: 130;
-	color: #000000;
-	padding-bottom: 0px;
-	}
+#moshitime {
+	font-family:"Impact";
+align:"center";
+font-size: 130;
+color: #000000;
+padding-bottom: 0px;
+}
 
 
-	#ampm {
-		font-family:"Arial";
-	position: relative;
-	left:-189px;
-	top:139px;
-	font-size: 28;
-	color: #000000;
-	padding-bottom: 0px;
-	}
- 
-	#popupcontent{
-	   visibility: hidden;
-	   overflow: hidden;
-	   background-color:#05dff8;
-	   border: none;
-	}
+#ampm {
+	font-family:"Arial";
+position: relative;
+left:-189px;
+top:139px;
+font-size: 28;
+color: #000000;
+padding-bottom: 0px;
+}
 
-	#moshidate {
-		position: absolute;
-		visibility: hidden;
-		overflow: hidden;
-		background-color:#05dff8;
-		border: none;
-	}
+#popupcontent{
+	visibility: hidden;
+	overflow: hidden;
+	background-color:#05dff8;
+	border: none;
+}
 
-	a:link {
-	    color: #00FFFF;
-	}
+#moshidate {
+	position: absolute;
+	visibility: hidden;
+	overflow: hidden;
+	background-color:#05dff8;
+	border: none;
+}
 
-	a:visited {
-	    color: #00FF00;
-	}
+a:link {
+		color: #00FFFF;
+}
 
-	a:hover {
-	    color: #FF00FF;
-	}
+a:visited {
+		color: #00FF00;
+}
+
+a:hover {
+		color: #FF00FF;
+}
 table {
-    border: none;
+	border: none;
 }

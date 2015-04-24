@@ -27,8 +27,9 @@ case "playsleepsound":
 	hidePopUpWindow('popupcontent');
 	break;
 case "moshidate":
-	d = new Date();
-	alert (d.toDateString());
+//	d = new Date();
+//	alert (d.toDateString());
+	showMoshiDate();
 	hidePopUpWindow('popupcontent');
 	break;
 case "temperature":
@@ -42,6 +43,12 @@ case "nightlight":
 }
 
 }
+  function showMoshiDate() {
+			d = new Date();
+			alert (d.toDateString());
+
+	}
+
 
   function hidePopUpWindow(PopName){
      var popUp = document.getElementById(PopName.toString());
@@ -92,5 +99,3 @@ case "nightlight":
   		}
 		return i;
 		}
-
-		

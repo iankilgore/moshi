@@ -33,6 +33,7 @@
 	}
 
 	#moshidate {
+		position: absolute;
 		visibility: hidden;
 		overflow: hidden;
 		background-color:#05dff8;

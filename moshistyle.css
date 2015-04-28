@@ -43,10 +43,15 @@ padding-bottom: 0px;
 	top:-200px;
 	visibility: hidden;
 	overflow: hidden;
-	background-color:#05dff8;
+	background-color: none;
 	border: none;
 }
-
+p.pos_fixed {
+	font-family:"Arial";
+	position: fixed;
+	top: 136px;
+	right:-298px;
+}
 a:link {
 		color: #00FFFF;
 }

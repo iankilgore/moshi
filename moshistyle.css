@@ -1,8 +1,7 @@
 p {font-family:"Comic Sans MS";}
 p.pos_fixed {
 		position: relative;
-
-		right: 5px;
+		left: 5px;
 		color: red;
 
 }
@@ -39,7 +38,7 @@ padding-bottom: 0px;
 }
 
 #moshidate {
-	position: absolute;
+	position: fixed;
 	visibility: hidden;
 	overflow: hidden;
 	background-color:#05dff8;

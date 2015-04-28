@@ -68,6 +68,17 @@ function showmoshidate()
      popUp.style.visibility = "visible";
   }
 
+	function showCustomPopUpWindow(top,left,width,height,PopName){
+		var popUp = document.getElementById(PopName.toString());
+
+		popUp.style.top = top + "px";
+		popUp.style.left = left + "px";
+		popUp.style.width = width + "px";
+		popUp.style.height = height + "px";
+
+
+		popUp.style.visibility = "visible";
+	}
 
 	function startTime()
 		{

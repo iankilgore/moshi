@@ -21,7 +21,7 @@
       <tr>
         <td valign=top>
 <div id="nightlight"></div>
-    <a href="#" onclick="commandPlease.play(); showNewPopUpWindow(300,100,'popupcontent');" >Hello, Moshi.</a>
+    <a href="#" onclick="myAudio.play(); showCustomPopUpWindow(200,200,300,100,'popupcontent');" >Hello, Moshi.</a>
 
 
 <a href="#" onclick="OffNightLight();" >Night Light Off</a>
@@ -62,10 +62,33 @@
         </div>
 			</td>
 		</tr>
-    <tr> 
+    <tr>
       <td align="center">
         <div id="moshidate">
           <p class="pos_fixed">SUN<br>MON<br>TUE<br>WED<br>THU<br>FRI<br>SAT</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <div id="AlarmMenu">
+          <p>
+            <audio id="alarm_1">
+            <source src="http://www.externalharddrive.com/waves/sirens/sirentone.wav" type="audio/wav">
+            </audio>
+            <a href="#AlarmMenuChoice" onclick="alarm_1.play(); setAlarmChoice('alarm_1'); hidePopUpWindow('AlarmMenu');">Alarm 1</a>
+            <br>
+            <audio id="alarm_2">
+            <source src="http://www.externalharddrive.com/waves/sirens/sirens.wav" type="audio/wav">
+            </audio>
+            <a href="#AlarmMenuChoice" onclick="alarm_2.play(); setAlarmChoice('alarm_2'); hidePopUpWindow('AlarmMenu');">Alarm 2</a>
+            <br>
+            <audio id="alarm_3">
+            <source src="http://www.externalharddrive.com/waves/animal/rooster.wav" type="audio/wav">
+            </audio>
+            <a href="#AlarmMenuChoice" onclick="alarm_3.play(); setAlarmChoice('alarm_3'); hidePopUpWindow('AlarmMenu');">Alarm 3</a>
+            <br>
+          </p>
         </div>
       </td>
     </tr>
@@ -76,7 +99,7 @@
 </tr>
 </table>
 <script>
-var commandPlease = document.getElementById("myAudio");
+var AlarmChoice = document.getElementById("alarm_1");
 </script>
 
   </body>

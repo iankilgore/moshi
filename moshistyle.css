@@ -46,6 +46,16 @@ padding-bottom: 0px;
 	background-color: none;
 	border: none;
 }
+
+#AlarmMenu {
+	font-family:"Arial";
+	position: static;
+	top:-200px;
+	visibility: hidden;
+	overflow: hidden;
+	background-color: none;
+	border: none;
+}
 p.pos_fixed {
 	font-family:"Arial";
 	position: fixed;

@@ -7,7 +7,7 @@ case "time":
 	hidePopUpWindow('popupcontent');
 	break;
 case "alarm":
-	alert (newcommand);
+	AlarmChoice.play();
 	hidePopUpWindow('popupcontent');
 	break;
 case "setalarm":
@@ -15,7 +15,7 @@ case "setalarm":
 	hidePopUpWindow('popupcontent');
 	break;
 case "alarmsound":
-	alert (newcommand);
+	chooseAlarmSound();
 	hidePopUpWindow('popupcontent');
 	break;
 case "sleepsound":
@@ -27,11 +27,8 @@ case "playsleepsound":
 	hidePopUpWindow('popupcontent');
 	break;
 case "moshidate":
-//	d = new Date();
-	//alert (d.toDateString());
 	showmoshidate();
 	hidePopUpWindow('popupcontent');
-	//
 	break;
 case "temperature":
 	alert (newcommand);
@@ -47,28 +44,25 @@ case "nightlight":
 function showmoshidate()
 {
 	d = new Date();
-	showNewPopUpWindow (200, 200, 'moshidate')
+	showCustomPopUpWindow (200,200,200,200, 'moshidate')
 
 }
-  function hidePopUpWindow(PopName){
+
+function hidePopUpWindow(PopName){
      var popUp = document.getElementById(PopName.toString());
      popUp.style.visibility = "hidden";
 		 document.getElementById("commands").value=null;
   }
 
-	function showNewPopUpWindow(w,h,PopName){
-     var popUp = document.getElementById(PopName.toString());
+function chooseAlarmSound() {
+	showCustomPopUpWindow(200,200,200,200,"AlarmMenu")
 
-     popUp.style.top = "200px";
-     popUp.style.left = "200px";
-     popUp.style.width = w + "px";
-     popUp.style.height = h + "px";
+}
+function setAlarmChoice(choice) {
+	AlarmChoice = document.getElementById(choice);
+}
 
-
-     popUp.style.visibility = "visible";
-  }
-
-	function showCustomPopUpWindow(top,left,width,height,PopName){
+function showCustomPopUpWindow(top,left,width,height,PopName){
 		var popUp = document.getElementById(PopName.toString());
 
 		popUp.style.top = top + "px";

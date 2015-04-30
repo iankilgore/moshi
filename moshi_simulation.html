@@ -96,6 +96,29 @@
         </div>
       </td>
     </tr>
+    <tr>
+      <td align="center">
+        <div id="sleepsoundMenu">
+          <p>
+            <audio id="sound_1">
+            <source src="sleep_sound_1.mp3" type="audio/mp3">
+            </audio>
+            <a href="#SoundMenuChoice" onclick="sound_1.play(); setSoundChoice('sound_1'); hidePopUpWindow('sleepsoundMenu');">Sound 1</a>
+            <br>
+            <audio id="sound_2">
+            <source src="sleep_sound_2.mp3" type="audio/mp3">
+            </audio>
+            <a href="#SoundMenuChoice" onclick="sound_2.play(); setSoundChoice('sound_2'); hidePopUpWindow('sleepsoundMenu');">Sound 2</a>
+            <br>
+            <audio id="sound_3">
+            <source src="sleep_sound_3.mp3" type="audio/mp3">
+            </audio>
+            <a href="#SoundMenuChoice" onclick="sound_3.play(); setSoundChoice('sound_3'); hidePopUpWindow('sleepsoundMenu');">Sound 3</a>
+            <br>
+          </p>
+        </div>
+      </td>
+    </tr>
 	</table>
 	</center>
 
@@ -104,6 +127,7 @@
 </table>
 <script>
 var AlarmChoice = document.getElementById("alarm_1");
+var SoundChoice = document.getElementById("sound_1");
 </script>
 
   </body>

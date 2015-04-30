@@ -19,7 +19,7 @@ case "alarmsound":
 	hidePopUpWindow('popupcontent');
 	break;
 case "sleepsound":
-	alert (newcommand);
+	chooseSleepSound();
 	hidePopUpWindow('popupcontent');
 	break;
 case "playsleepsound":
@@ -58,8 +58,16 @@ function chooseAlarmSound() {
 	showCustomPopUpWindow(200,200,200,200,"AlarmMenu")
 
 }
+function chooseSleepSound() {
+	showCustomPopUpWindow(200,200,200,200,"sleepsoundMenu")
+
+}
+
 function setAlarmChoice(choice) {
 	AlarmChoice = document.getElementById(choice);
+}
+function setSoundChoice(choice) {
+	SoundChoice = document.getElementById(choice);
 }
 
 function showCustomPopUpWindow(top,left,width,height,PopName){

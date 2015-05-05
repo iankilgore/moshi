@@ -31,7 +31,7 @@ case "moshidate":
 	hidePopUpWindow('popupcontent');
 	break;
 case "temperature":
-	alert (newcommand);
+	OpenWeatherWidget();
 	hidePopUpWindow('popupcontent');
 	break;
 case "nightlight":
@@ -41,6 +41,12 @@ case "nightlight":
 }
 
 }
+
+function OpenWeatherWidget()
+{
+	  showCustomPopUpWindow (-300,0,300,300, 'weatherwidget');
+	  weathertimer=setTimeout(function(){hidePopUpWindow('weatherwidget')},6000);
+	}
 function showmoshidate()
 {
 	d = new Date();

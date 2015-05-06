@@ -75,7 +75,8 @@ padding-bottom: 0px;
 	border: none;
 }
 p.pos_fixed {
-	font-family:"Arial";
+	font-family:"Arial Black";
+	font-size: 14;
 	color: black;
 	position: fixed;
 	top: 136px;

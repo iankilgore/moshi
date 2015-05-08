@@ -83,15 +83,15 @@ p.pos_fixed {
 	right:-298px;
 }
 a:link {
-		color: #00FFFF;
+		color: #222222;
 }
 
 a:visited {
-		color: #00FF00;
+		color: #000000;
 }
 
 a:hover {
-		color: #FF00FF;
+		color: #0000FF;
 }
 table {
 	border: none;

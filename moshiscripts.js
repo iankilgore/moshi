@@ -95,7 +95,7 @@ function showCustomPopUpWindow(top,left,width,height,PopName){
 		var today=new Date();
 		var h=today.getHours();
 		var ampm="AM";
-		if (h > 12)
+		if (h > 11)
 			{
 			h=h-12;
 			ampm="PM";

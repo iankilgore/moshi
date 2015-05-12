@@ -97,7 +97,10 @@ function showCustomPopUpWindow(top,left,width,height,PopName){
 		var ampm="AM";
 		if (h > 11)
 			{
+			if (h != 12)
+			{
 			h=h-12;
+			}
 			ampm="PM";
 			};
 

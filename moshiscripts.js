@@ -103,7 +103,9 @@ function showCustomPopUpWindow(top,left,width,height,PopName){
 			}
 			ampm="PM";
 			};
-
+		if (h==0){
+			h=12;
+			}
 		var m=today.getMinutes();
 		var s=today.getSeconds();
 		// add a zero in front of numbers<10

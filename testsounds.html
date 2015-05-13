@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>sounds
+
+</title>
+<script>
+function sequenceSounds()
+{
+  alert("hello");
+  var soundList = ["command_please.wav","command_please.wav","command_please.wav"];
+soundList[1].play();
+
+}
+</script>
+</head>
+<body onload="sequenceSounds();">
+
+          <audio id="myAudio">
+          <source src="command_please.wav" type="audio/wav">
+          </audio>
+            <audio id="alarm_1">
+            <source src="alarm_1.mp3" type="audio/mp3">
+            </audio>
+            <audio id="alarm_2">
+            <source src="alarm_2.mp3" type="audio/mp3">
+            </audio>
+            <audio id="alarm_3">
+            <source src="alarm_3.mp3" type="audio/mp3">
+            </audio>
+	<button onclick="myAudio.play();alarm_1.play();">click me</button>
+<script>
+var soundList = ["myAudio","alarm_1","alarm_2"];
+</script>
+</body>
+</html>

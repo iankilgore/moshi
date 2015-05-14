@@ -100,6 +100,40 @@ function sayTime()
   case 2 :
   sayOnesMinute.src="moshivoice/2.wav";
   break;
+  case 3 :
+  sayOnesMinute.src="moshivoice/3.wav";
+  break;
+  case 4 :
+  sayOnesMinute.src="moshivoice/4.wav";
+  break;
+  case 5 :
+  sayOnesMinute.src="moshivoice/5.wav";
+  break;
+  case 6 :
+  sayOnesMinute.src="moshivoice/6.wav";
+  break;
+  case 7 :
+  sayOnesMinute.src="moshivoice/7.wav";
+  break;
+  case 8 :
+  sayOnesMinute.src="moshivoice/8.wav";
+  break;
+  case 9 :
+  sayOnesMinute.src="moshivoice/9.wav";
+  break;
   }
+
+
+var durationAudio1 = sayTimeIs.duration;
+var durationAudio2 = sayHour.duration;
+var durationAudio3 = sayTensMinute.duration;
+var durationAudio4 = sayOnesMinute.duration;
+
+sayTimeIs.play();
+setTimeout(sayHour.play(),durationAudio1);
+setTimeout(sayTensMinute.play(),durationAudio1+durationAudio2);
+setTimeout(sayOnesMinute.play(),durationAudio1+durationAudio2+durationAudio3);
+setTimeout(sayAMPM.play(),durationAudio1+durationAudio2+durationAudio3+durationAudio4);
+
 
 }

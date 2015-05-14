@@ -3,7 +3,6 @@ var newcommand=document.getElementById("commands").value;
 
 switch(newcommand){
 case "time":
-	alert (newcommand);
 	sayTime ();
 	hidePopUpWindow('popupcontent');
 	break;

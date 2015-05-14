@@ -1,7 +1,6 @@
-
 function sayTime()
 {
-  // alert ("about to say the time");
+
   var currentTime=new Date();
   var currentHour=currentTime.getHours();
   var currentMinute=currentTime.getMinutes();
@@ -9,10 +8,10 @@ function sayTime()
   var currentOnes=currentMinute % 10;
 
   var sayTimeIs=document.createElement("AUDIO");
-  sayTImeIs.src="moshivoice/the_time_is.wav";
+  sayTimeIs.src="moshivoice/the_time_is.wav";
 
   var sayAMPM=document.createElement("AUDIO");
-  sayAMPM.src="moshivoice/am.wav";
+
           if (currentHour > 11)
               {
               if (currentHour != 12)
@@ -24,7 +23,6 @@ function sayTime()
           if (currentHour==0){
               currentHour=12;
               }
-
   var sayHour=document.createElement("AUDIO");
   switch (currentHour) {
   case 1 :
@@ -63,9 +61,8 @@ function sayTime()
   case 12 :
   sayHour.src="moshivoice/12.wav";
   break;
-
-
   }
+
 
   var sayTensMinute=document.createElement("AUDIO");
   switch (currentTens) {
@@ -123,17 +120,16 @@ function sayTime()
   break;
   }
 
-
 var durationAudio1 = sayTimeIs.duration;
 var durationAudio2 = sayHour.duration;
 var durationAudio3 = sayTensMinute.duration;
 var durationAudio4 = sayOnesMinute.duration;
 
 sayTimeIs.play();
-setTimeout(sayHour.play(),durationAudio1);
-setTimeout(sayTensMinute.play(),durationAudio1+durationAudio2);
-setTimeout(sayOnesMinute.play(),durationAudio1+durationAudio2+durationAudio3);
-setTimeout(sayAMPM.play(),durationAudio1+durationAudio2+durationAudio3+durationAudio4);
+ setTimeout(function(){sayHour.play()},1000);
+ setTimeout(function(){sayTensMinute.play()},2000);
+ setTimeout(function(){sayOnesMinute.play()},3000);
+ setTimeout(function(){sayAMPM.play()},4000);
 
 
 }

@@ -127,9 +127,9 @@ var durationAudio4 = sayOnesMinute.duration;
 
 sayTimeIs.play();
  setTimeout(function(){sayHour.play()},1000);
- setTimeout(function(){sayTensMinute.play()},2000);
- setTimeout(function(){sayOnesMinute.play()},3000);
- setTimeout(function(){sayAMPM.play()},4000);
+ setTimeout(function(){sayTensMinute.play()},1450);
+ setTimeout(function(){sayOnesMinute.play()},1922);
+ setTimeout(function(){sayAMPM.play()},2418);
 
 
 }

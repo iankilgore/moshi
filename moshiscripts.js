@@ -28,11 +28,7 @@ case "playsleepsound":
 	break;
 case "moshidate":
 	showmoshidate();
-	hidemoshitime();
 	hidePopUpWindow('popupcontent');
-	setTimeout(function(){hidemoshitime()},10000);
-	showmoshitime();
-	hidemoshidate();
 	break;
 case "temperature":
 	OpenWeatherWidget();
@@ -54,8 +50,8 @@ function OpenWeatherWidget()
 function showmoshidate()
 {
 	d = new Date();
-	showCustomPopUpWindow (200,200,200,200, 'moshidate')
-
+	showCustomPopUpWindow (-400,-400,200,200, 'moshidate')
+	setTimeout(function(){hidePopUpWindow('moshidate')},10000);
 }
 
 function hidePopUpWindow(PopName){

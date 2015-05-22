@@ -74,6 +74,12 @@ padding-bottom: 0px;
 	background-color: none;
 	border: none;
 }
+#lightswitch {
+position: fixed;
+top:0;
+right:0;
+}
+
 p.pos_fixed {
 	font-family:"Arial Black";
 	font-size: 14;

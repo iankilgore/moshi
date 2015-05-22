@@ -11,7 +11,16 @@ var slide_array = [
 
 var slide_element;
 var offon;
-
+function blackbrown(backgrounddisplay){
+	if (backgrounddisplay="on")
+	{
+		document.getElementById("nightlight").innerHTML = "<style>body {background-color: #605a39;}</style>";
+		document.getElementById("lightswitch").innerHTML="<a href='#lightswitch' onclick=blackbrown('on');><img src='black-brown-toggle-switch-on.png' width='50' height='74'></a>";
+	} else {
+		document.getElementById("nightlight").innerHTML = "<style>body {background-color: #000000;}</style>";
+		document.getElementById("lightswitch").innerHTML="<a href='#lightswitch' onclick=blackbrown('off');><img src='black-brown-toggle-switch-off.png' width='50' height='74'></a>";
+	}
+}
 function Next(){
 	if (offon=="on") {
 	slide_counter++;

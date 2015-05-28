@@ -36,7 +36,12 @@ padding-bottom: 0px;
 	background-color:#05dff8;
 	border: none;
 }
-
+#setalarmmenu{
+	visibility: hidden;
+	overflow: hidden;
+	background-color:#05dff8;
+	border: none;
+}
 #moshidate {
 	font-family:"Arial";
 	position: relative;

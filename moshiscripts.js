@@ -11,7 +11,7 @@ case "alarm":
 	hidePopUpWindow('popupcontent');
 	break;
 case "setalarm":
-	alert (newcommand);
+	setalarmtime();
 	hidePopUpWindow('popupcontent');
 	break;
 case "alarmsound":
@@ -40,6 +40,10 @@ case "nightlight":
 	break;
 }
 
+}
+
+function setalarmtime(){
+	showCustomPopUpWindow (200,200,300,100, 'setalarmmenu')
 }
 
 function OpenWeatherWidget()
@@ -118,10 +122,7 @@ function showCustomPopUpWindow(top,left,width,height,PopName){
 		}
 		function checkalarm(){
 			var time = new Date().getHours();
-    var alarmhour;
-    var alarmminute;
-    alarmhour = 10;
-    alarmminute = 53;
+
     var currenttime = new Date();
     var currenthour = currenttime.getHours();
     var currentminute = currenttime.getMinutes();

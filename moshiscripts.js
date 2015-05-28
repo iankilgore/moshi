@@ -43,7 +43,7 @@ case "nightlight":
 }
 
 function setalarmtime(){
-	showCustomPopUpWindow (200,200,300,100, 'setalarmmenu')
+	showCustomPopUpWindow (-531,0,300,100, 'setalarmmenu')
 }
 
 function OpenWeatherWidget()

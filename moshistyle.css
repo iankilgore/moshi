@@ -37,6 +37,7 @@ padding-bottom: 0px;
 	border: none;
 }
 #setalarmmenu{
+	position: relative;
 	visibility: hidden;
 	overflow: hidden;
 	background-color:#05dff8;

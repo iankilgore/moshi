@@ -112,9 +112,26 @@ function showCustomPopUpWindow(top,left,width,height,PopName){
 		s=checkTime(s);
 		document.getElementById('ampm').innerHTML=ampm;
 		document.getElementById('moshitime').innerHTML=h+":"+m;
+
+		checkalarm();
 		t=setTimeout(function(){startTime()},500);
 		}
-
+		function checkalarm(){
+			var time = new Date().getHours();
+    var alarmhour;
+    var alarmminute;
+    alarmhour = 10;
+    alarmminute = 53;
+    var currenttime = new Date();
+    var currenthour = currenttime.getHours();
+    var currentminute = currenttime.getMinutes();
+    if (currenthour == alarmhour) {
+if (currentminute == alarmminute) {
+// var AlarmChoice = document.getElementById("alarm_1");
+AlarmChoice.play();
+}
+}
+}
 	function checkTime(i)
 		{
 		if (i<10)

@@ -1,3 +1,15 @@
+function setalarmminute(){
+alarmminute=document.getElementById("minuteselect").value
+alert(alarmminute);
+}
+function setalarmhour(){
+alarmhour=document.getElementById("hourselect").value
+alert(alarmhour);
+}
+function setalarmampm(){
+alarmampm=document.getElementById("ampmselect").value
+alert(alarmampm);
+}
 function moshicommand(){
 var newcommand=document.getElementById("commands").value;
 

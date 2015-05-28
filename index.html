@@ -142,7 +142,7 @@
         <table>
         <tr>
         <td>
-          <select id="hourselect" onchange="">
+          <select id="hourselect" onchange="setalarmhour();">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -158,7 +158,7 @@
       </select>
     </td>
     <td>
-      <select id "minuteselect" onchange="">
+      <select id="minuteselect" onchange="setalarmminute();">
       <option value="0">00</option>
       <option value="1">01</option>
       <option value="2">02</option>
@@ -222,7 +222,7 @@
     </select>
     </td>
     <td>
-      <select id "ampmselect" onchange="">
+      <select id="ampmselect" onchange="setalarmampm();">
         <option value="am">AM</option>
         <option value="pm">PM</option>
       </select>

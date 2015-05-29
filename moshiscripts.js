@@ -1,14 +1,11 @@
 function setalarmminute(){
-alarmminute=document.getElementById("minuteselect").value
-alert(alarmminute);
+alarmminute=Math.round(document.getElementById("minuteselect").value);
 }
 function setalarmhour(){
-alarmhour=document.getElementById("hourselect").value
-alert(alarmhour);
+alarmhour=Math.round(document.getElementById("hourselect").value);
 }
 function setalarmampm(){
-alarmampm=document.getElementById("ampmselect").value
-alert(alarmampm);
+alarmampm=document.getElementById("ampmselect").value;
 }
 function moshicommand(){
 var newcommand=document.getElementById("commands").value;
@@ -132,19 +129,25 @@ function showCustomPopUpWindow(top,left,width,height,PopName){
 		checkalarm();
 		t=setTimeout(function(){startTime()},500);
 		}
-		function checkalarm(){
+
+function checkalarm(){
 			var time = new Date().getHours();
 
     var currenttime = new Date();
     var currenthour = currenttime.getHours();
     var currentminute = currenttime.getMinutes();
+		if (alarmampm=="pm") {
+				if (alarmhour < 12) {
+					alarmhour=alarmhour+12;
+				}
+		}
     if (currenthour == alarmhour) {
-if (currentminute == alarmminute) {
-// var AlarmChoice = document.getElementById("alarm_1");
-AlarmChoice.play();
+ 			if (currentminute == alarmminute) {
+				AlarmChoice.play();
+			}
+		}
 }
-}
-}
+
 	function checkTime(i)
 		{
 		if (i<10)

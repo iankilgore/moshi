@@ -1,7 +1,7 @@
-function setalarmminute(){
+function setalarmMinute(){
 alarmminute=Math.round(document.getElementById("minuteselect").value);
 }
-function setalarmhour(){
+function setalarmHour(){
 alarmhour=Math.round(document.getElementById("hourselect").value);
 }
 function setalarmampm(){
@@ -137,12 +137,12 @@ function checkalarm(){
     var currenthour = currenttime.getHours();
     var currentminute = currenttime.getMinutes();
 		if (alarmampm=="pm") {
-				if (alarmhour < 12) {
-					alarmhour=alarmhour+12;
+				if (alarmHour < 12) {
+					alarmHour=alarmHour+12;
 				}
 		}
-    if (currenthour == alarmhour) {
- 			if (currentminute == alarmminute) {
+    if (currenthour == alarmHour) {
+ 			if (currentminute == alarmMinute) {
 				AlarmChoice.play();
 			}
 		}

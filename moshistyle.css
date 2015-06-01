@@ -88,10 +88,10 @@ right:0;
 }
 
 #alarmIcon {
+	visibility: visible;
 position: relative;
-left:-189px;
-top:139px;
-padding-bottom: 0px;
+top:-700px;
+left:750px;
 }
 
 p.pos_fixed {

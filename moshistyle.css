@@ -80,10 +80,18 @@ padding-bottom: 0px;
 	background-color: none;
 	border: none;
 }
+
 #lightswitch {
 position: fixed;
 top:0;
 right:0;
+}
+
+#alarmIcon {
+position: relative;
+left:-189px;
+top:139px;
+padding-bottom: 0px;
 }
 
 p.pos_fixed {

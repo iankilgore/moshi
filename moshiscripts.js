@@ -7,7 +7,7 @@ alarmhour=Math.round(document.getElementById("hourselect").value);
 function setalarmampm(){
 alarmampm=document.getElementById("ampmselect").value;
 }
-function moshicommand(){
+function moshiCommand(){
 var newcommand=document.getElementById("commands").value;
 
 switch(newcommand){
@@ -51,7 +51,7 @@ case "nightlight":
 
 }
 
-function setalarmtime(){
+function setAlarmTime(){
 	showCustomPopUpWindow (-531,0,300,100, 'setalarmmenu')
 }
 
@@ -60,7 +60,7 @@ function OpenWeatherWidget()
 	  showCustomPopUpWindow (-300,0,300,300, 'weatherwidget');
 	  weathertimer=setTimeout(function(){hidePopUpWindow('weatherwidget')},6000);
 	}
-function showmoshidate()
+function showMoshiDate()
 {
 	d = new Date();
 	showCustomPopUpWindow (-400,-400,200,200, 'moshidate')

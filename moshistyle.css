@@ -89,9 +89,9 @@ right:0;
 
 #alarmIcon {
 	visibility: visible;
-position: relative;
-top:-700px;
-left:750px;
+	position: fixed;
+	top:100;
+	right:0;
 }
 
 p.pos_fixed {

@@ -1,13 +1,13 @@
-function setalarmMinute(){
+function setalarmminute(){
 alarmminute=Math.round(document.getElementById("minuteselect").value);
 }
-function setalarmHour(){
+function setalarmhour(){
 alarmhour=Math.round(document.getElementById("hourselect").value);
 }
 function setalarmampm(){
 alarmampm=document.getElementById("ampmselect").value;
 }
-function moshiCommand(){
+function moshicommand(){
 var newcommand=document.getElementById("commands").value;
 
 switch(newcommand){
@@ -51,7 +51,7 @@ case "nightlight":
 
 }
 
-function setAlarmTime(){
+function setalarmtime(){
 	showCustomPopUpWindow (-531,0,300,100, 'setalarmmenu')
 }
 
@@ -60,7 +60,7 @@ function OpenWeatherWidget()
 	  showCustomPopUpWindow (-300,0,300,300, 'weatherwidget');
 	  weathertimer=setTimeout(function(){hidePopUpWindow('weatherwidget')},6000);
 	}
-function showMoshiDate()
+function showmoshidate()
 {
 	d = new Date();
 	showCustomPopUpWindow (-400,-400,200,200, 'moshidate')
@@ -137,12 +137,12 @@ function checkalarm(){
     var currenthour = currenttime.getHours();
     var currentminute = currenttime.getMinutes();
 		if (alarmampm=="pm") {
-				if (alarmHour < 12) {
-					alarmHour=alarmHour+12;
+				if (alarmhour < 12) {
+					alarmhour=alarmhour+12;
 				}
 		}
-    if (currenthour == alarmHour) {
- 			if (currentminute == alarmMinute) {
+    if (currenthour == alarmhour) {
+ 			if (currentminute == alarmminute) {
 				AlarmChoice.play();
 			}
 		}

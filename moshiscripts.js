@@ -121,8 +121,8 @@ function setSoundChoice(choice) {
 function checkAlarm(){
 		var time = new Date().getHours();
     var currentTime = new Date();
-    var currentHour = currenttime.getHours();
-    var currentMinute = currenttime.getMinutes();
+    var currentHour = currentTime.getHours();
+    var currentMinute = currentTime.getMinutes();
 		if (alarmAMPM=="pm") {
 				if (alarmHour < 12) {
 					alarmHour=alarmHour+12;

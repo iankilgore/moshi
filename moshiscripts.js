@@ -1,66 +1,76 @@
-function setAlarmMinute(){
-alarmMinute=Math.round(document.getElementById("minuteselect").value);
-}
-function setAlarmHour(){
-alarmHour=Math.round(document.getElementById("hourselect").value);
-}
-function setAlarmAMPM(){
-alarmAMPM=document.getElementById("ampmselect").value;
-}
+// Global Variables
+	var slide_counter = 0;
+	var slide_array = [
+		"<style>body {background-color: #1a0aff;}</style>",
+		"<style>body {background-color: #00ffff;}</style>",
+		"<style>body {background-color: #00ff55;}</style>",
+		"<style>body {background-color: #a8ff64;}</style>",
+		"<style>body {background-color: #de0614;}</style>",
+		"<style>body {background-color: #a806de;}</style>",
 
+	];
+
+	var slide_element;
+	var offon;
+	var AlarmChoice = document.getElementById("alarm_1");
+	var SoundChoice = document.getElementById("sound_1");
+	var alarmHour;
+	var alarmMinute;
+	var alarmAMPM;
+
+// Accept commands for moshi and move to correct function ---------------------
 function moshiCommand(){
-var newCommand=document.getElementById("commands").value;
+	var newCommand=document.getElementById("commands").value;
 
-switch(newCommand){
-case "time":
-	sayTime ();
-	hidePopUpWindow('popupcontent');
-	break;
-case "alarm":
-	AlarmChoice.play();
-	hidePopUpWindow('popupcontent');
-	break;
-case "setalarm":
-	setAlarmTime();
-	hidePopUpWindow('popupcontent');
-	break;
-case "alarmsound":
-	chooseAlarmSound();
-	hidePopUpWindow('popupcontent');
-	break;
-case "sleepsound":
-	chooseSleepSound();
-	hidePopUpWindow('popupcontent');
-	break;
-case "playsleepsound":
-	alert (newcommand);
-	hidePopUpWindow('popupcontent');
-	break;
-case "moshidate":
-	showMoshiDate();
-	hidePopUpWindow('popupcontent');
-	break;
-case "temperature":
-	OpenWeatherWidget();
-	hidePopUpWindow('popupcontent');
-	break;
-case "nightlight":
-	onNightLight();
-	hidePopUpWindow('popupcontent');
-	break;
+	switch(newCommand){
+		case "time":
+			sayTime ();
+			hidePopUpWindow('popupcontent');
+			break;
+		case "alarm":
+			AlarmChoice.play();
+			hidePopUpWindow('popupcontent');
+			break;
+		case "setalarm":
+			setAlarmTime();
+			hidePopUpWindow('popupcontent');
+			break;
+		case "alarmsound":
+			chooseAlarmSound();
+			hidePopUpWindow('popupcontent');
+			break;
+		case "sleepsound":
+			chooseSleepSound();
+			hidePopUpWindow('popupcontent');
+			break;
+		case "playsleepsound":
+			alert (newcommand);
+			hidePopUpWindow('popupcontent');
+			break;
+		case "moshidate":
+			showMoshiDate();
+			hidePopUpWindow('popupcontent');
+			break;
+		case "temperature":
+			OpenWeatherWidget();
+			hidePopUpWindow('popupcontent');
+			break;
+		case "nightlight":
+			onNightLight();
+			hidePopUpWindow('popupcontent');
+			break;
+	}
+
 }
 
-}
-
-function setAlarmTime(){
-	showCustomPopUpWindow (-531,0,300,100, 'setalarmmenu')
-}
-
+// Moshi Weather functions -----------------------------------------------------
 function OpenWeatherWidget()
 {
 	  showCustomPopUpWindow (-300,0,300,300, 'weatherwidget');
 	  weathertimer=setTimeout(function(){hidePopUpWindow('weatherwidget')},6000);
-	}
+}
+
+// Moshi Date functions --------------------------------------------------------
 function showMoshiDate()
 {
 	d = new Date();
@@ -68,27 +78,15 @@ function showMoshiDate()
 	setTimeout(function(){hidePopUpWindow('moshidate')},10000);
 }
 
+
+// open and close pop up windows -----------------------------------------------
+
 function hidePopUpWindow(PopName){
      var popUp = document.getElementById(PopName.toString());
      popUp.style.visibility = "hidden";
 		 document.getElementById("commands").value=null;
-  }
-
-function chooseAlarmSound() {
-	showCustomPopUpWindow(200,200,200,200,"AlarmMenu")
-
-}
-function chooseSleepSound() {
-	showCustomPopUpWindow(200,200,200,200,"sleepsoundMenu")
-
 }
 
-function setAlarmChoice(choice) {
-	AlarmChoice = document.getElementById(choice);
-}
-function setSoundChoice(choice) {
-	SoundChoice = document.getElementById(choice);
-}
 
 function showCustomPopUpWindow(top,left,width,height,PopName){
 		var popUp = document.getElementById(PopName.toString());
@@ -100,10 +98,63 @@ function showCustomPopUpWindow(top,left,width,height,PopName){
 
 
 		popUp.style.visibility = "visible";
-	}
+}
 
-	function startTime()
-		{
+// Alarm functions -------------------------------------------------------------
+
+function chooseAlarmSound() {
+	showCustomPopUpWindow(200,200,200,200,"AlarmMenu")
+}
+
+function chooseSleepSound() {
+	showCustomPopUpWindow(200,200,200,200,"sleepsoundMenu")
+}
+
+function setAlarmChoice(choice) {
+	AlarmChoice = document.getElementById(choice);
+}
+
+function setSoundChoice(choice) {
+	SoundChoice = document.getElementById(choice);
+}
+
+function checkAlarm(){
+		var time = new Date().getHours();
+    var currentTime = new Date();
+    var currentHour = currenttime.getHours();
+    var currentMinute = currenttime.getMinutes();
+		if (alarmAMPM=="pm") {
+				if (alarmHour < 12) {
+					alarmHour=alarmHour+12;
+				}
+		}
+    if (currentHour == alarmHour) {
+ 			if (currentMinute == alarmMinute) {
+				AlarmChoice.play();
+			}
+		}
+}
+
+// set alarm functions -------------------------------------------------------
+function setAlarmTime(){
+	showCustomPopUpWindow (-531,0,300,100, 'setalarmmenu')
+}
+
+function setAlarmMinute(){
+	alarmMinute=Math.round(document.getElementById("minuteselect").value);
+}
+
+function setAlarmHour(){
+	alarmHour=Math.round(document.getElementById("hourselect").value);
+}
+
+function setAlarmAMPM(){
+	alarmAMPM=document.getElementById("ampmselect").value;
+}
+
+// Time functions --------------------------------------------------------------
+function startTime(){
+
 		var timedifference=0;
 		var today=new Date();
 		var h=today.getHours();
@@ -127,33 +178,67 @@ function showCustomPopUpWindow(top,left,width,height,PopName){
 		document.getElementById('ampm').innerHTML=ampm;
 		document.getElementById('moshitime').innerHTML=h+":"+m;
 
-		checkalarm();
+		checkAlarm();
 		t=setTimeout(function(){startTime()},500);
-		}
-
-function checkAlarm(){
-			var time = new Date().getHours();
-
-    var currenttime = new Date();
-    var currenthour = currenttime.getHours();
-    var currentminute = currenttime.getMinutes();
-		if (alarmampm=="pm") {
-				if (alarmhour < 12) {
-					alarmhour=alarmhour+12;
-				}
-		}
-    if (currenthour == alarmhour) {
- 			if (currentminute == alarmminute) {
-				AlarmChoice.play();
-			}
-		}
 }
 
-	function checkTime(i)
+
+function checkTime(i)
+{
+	if (i<10)
 		{
-		if (i<10)
-  		{
-  		i="0" + i;
-  		}
-		return i;
+		i="0" + i;
 		}
+	return i;
+}
+// old moshi colors.js
+// Night LIght functions -------------------------------------------------------
+
+function blackbrown(backgrounddisplay){
+	offNightLight();
+	if (backgrounddisplay=="on")
+	{
+		document.getElementById("nightlight").innerHTML = "<style>body {background-color: #605a39;}</style>";
+		document.getElementById("lightswitch").innerHTML="<a href='#lightswitch' onclick=blackbrown('off');><img src='black-brown-toggle-switch-on.png' width='50' height='74'></a>";
+
+	} else {
+		document.getElementById("nightlight").innerHTML = "<style>body {background-color: #000000;}</style>";
+		document.getElementById("lightswitch").innerHTML="<a href='#lightswitch' onclick=blackbrown('on');><img src='black-brown-toggle-switch-off.png' width='50' height='74'></a>";
+	}
+}
+function Next(){
+	if (offon=="on") {
+	slide_counter++;
+	if(slide_counter > (slide_array.length - 1)){
+		slide_counter = 0;
+	}
+	setTimeout('switchSlide()',1000);
+	}
+}
+
+function switchSlide(){
+	if (offon=="on") {
+	slide_element.innerHTML = slide_array[slide_counter];
+	setTimeout('Next()',2000);
+	}
+if (offon=="off") {
+	slide_counter = 0;
+	slide_element.innerHTML = "<style>body {background-color: #605a39;}</style>"
+	offNightLight();
+		  }
+}
+
+function onNightLight(){
+	if (offon != "on") {
+	offon="on";
+	slide_element = document.getElementById("nightlight");
+	switchSlide();
+	}
+}
+
+function offNightLight(){
+	offon="off";
+	slide_counter = 0;
+	slide_element.innerHTML = "<style>body {background-color: #605a39;}</style>"
+	return;
+}

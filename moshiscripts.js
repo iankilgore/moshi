@@ -12,8 +12,8 @@
 
 	var slide_element;
 	var offon;
-	var AlarmChoice = document.getElementById("alarm_1");
-	var SoundChoice = document.getElementById("sound_1");
+	var AlarmChoice = setAlarmChoice("alarm_1");
+	var SoundChoice = setSoundChoice("sound_1");
 	var alarmHour;
 	var alarmMinute;
 	var alarmAMPM;

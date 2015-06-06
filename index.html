@@ -23,7 +23,7 @@
     <td valign=top>
       <div id="nightlight"></div>
       <a href="#" onclick="myAudio.play(); showCustomPopUpWindow(200,200,300,100,'popupcontent');" >Hello, Moshi.</a>
-      <a href="#" onclick="OffNightLight();" >Night Light Off</a>
+      <a href="#" onclick="offNightLight();" >Night Light Off</a>
       <br>
       <br>
       <br>
@@ -41,7 +41,7 @@
             <div id="popupcontent">
             <p>
                 Welcome, command please.
-              <select id="commands" onchange="moshicommand()">
+              <select id="commands" onchange="moshiCommand()">
                 <option value="time">Time</option>
                 <option value="alarm">Alarm</option>
                 <option value="setalarm">Set Alarm</option>
@@ -137,7 +137,7 @@
         <table>
         <tr>
         <td>
-          <select id="hourselect" onchange="setalarmhour();">
+          <select id="hourselect" onchange="setAlarmHour();">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -153,7 +153,7 @@
       </select>
     </td>
     <td>
-      <select id="minuteselect" onchange="setalarmminute();">
+      <select id="minuteselect" onchange="setAlarmMinute();">
       <option value="0">00</option>
       <option value="1">01</option>
       <option value="2">02</option>
@@ -217,7 +217,7 @@
     </select>
     </td>
     <td>
-      <select id="ampmselect" onchange="setalarmampm();">
+      <select id="ampmselect" onchange="setAlarmAMPM();">
         <option value="am">AM</option>
         <option value="pm">PM</option>
       </select>

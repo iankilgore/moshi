@@ -1,16 +1,17 @@
-function setalarmminute(){
-alarmminute=Math.round(document.getElementById("minuteselect").value);
+function setAlarmMinute(){
+alarmMinute=Math.round(document.getElementById("minuteselect").value);
 }
-function setalarmhour(){
-alarmhour=Math.round(document.getElementById("hourselect").value);
+function setAlarmHour(){
+alarmHour=Math.round(document.getElementById("hourselect").value);
 }
-function setalarmampm(){
-alarmampm=document.getElementById("ampmselect").value;
+function setAlarmAMPM(){
+alarmAMPM=document.getElementById("ampmselect").value;
 }
-function moshicommand(){
-var newcommand=document.getElementById("commands").value;
 
-switch(newcommand){
+function moshiCommand(){
+var newCommand=document.getElementById("commands").value;
+
+switch(newCommand){
 case "time":
 	sayTime ();
 	hidePopUpWindow('popupcontent');
@@ -20,7 +21,7 @@ case "alarm":
 	hidePopUpWindow('popupcontent');
 	break;
 case "setalarm":
-	setalarmtime();
+	setAlarmTime();
 	hidePopUpWindow('popupcontent');
 	break;
 case "alarmsound":
@@ -36,7 +37,7 @@ case "playsleepsound":
 	hidePopUpWindow('popupcontent');
 	break;
 case "moshidate":
-	showmoshidate();
+	showMoshiDate();
 	hidePopUpWindow('popupcontent');
 	break;
 case "temperature":
@@ -44,14 +45,14 @@ case "temperature":
 	hidePopUpWindow('popupcontent');
 	break;
 case "nightlight":
-	nightlight();
+	onNightLight();
 	hidePopUpWindow('popupcontent');
 	break;
 }
 
 }
 
-function setalarmtime(){
+function setAlarmTime(){
 	showCustomPopUpWindow (-531,0,300,100, 'setalarmmenu')
 }
 
@@ -60,7 +61,7 @@ function OpenWeatherWidget()
 	  showCustomPopUpWindow (-300,0,300,300, 'weatherwidget');
 	  weathertimer=setTimeout(function(){hidePopUpWindow('weatherwidget')},6000);
 	}
-function showmoshidate()
+function showMoshiDate()
 {
 	d = new Date();
 	showCustomPopUpWindow (-400,-400,200,200, 'moshidate')
@@ -130,7 +131,7 @@ function showCustomPopUpWindow(top,left,width,height,PopName){
 		t=setTimeout(function(){startTime()},500);
 		}
 
-function checkalarm(){
+function checkAlarm(){
 			var time = new Date().getHours();
 
     var currenttime = new Date();

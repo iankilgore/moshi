@@ -45,7 +45,7 @@ if (offon=="off") {
 		  }
 }
 
-function nightlight(){
+function onNightLight(){
 	if (offon != "on") {
 	offon="on";
 	slide_element = document.getElementById("nightlight");
@@ -53,7 +53,7 @@ function nightlight(){
 	}
 }
 
-function OffNightLight(){
+function offNightLight(){
 	offon="off";
 	slide_counter = 0;
 	slide_element.innerHTML = "<style>body {background-color: #605a39;}</style>"

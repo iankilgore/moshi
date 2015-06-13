@@ -33,14 +33,14 @@ padding-bottom: 0px;
 #popupcontent{
 	visibility: hidden;
 	overflow: hidden;
-	background-color:#05dff8;
+	background-color:#008000;
 	border: none;
 }
 #setalarmmenu{
 	position: relative;
 	visibility: hidden;
 	overflow: hidden;
-	background-color:#05dff8;
+	background-color:#800000;
 	border: none;
 }
 #moshidate {

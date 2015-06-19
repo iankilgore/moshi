@@ -43,8 +43,6 @@ padding-bottom: 0px;
 }
 #moshidate {
 	font-family:"Arial";
-	position: relative;
-	top:-200px;
 	visibility: hidden;
 	overflow: hidden;
 	background-color: red;

@@ -22,9 +22,7 @@ padding-bottom: 0px;
 
 #ampm {
 	font-family:"Arial";
-position: relative;
-left:-189px;
-top:139px;
+
 font-size: 28;
 color: #000000;
 padding-bottom: 0px;
@@ -89,9 +87,7 @@ right:0;
 
 #alarmIcon {
 	visibility: visible;
-	position: fixed;
-	top:188;
-	right:900;
+
 }
 
 p.pos_fixed {

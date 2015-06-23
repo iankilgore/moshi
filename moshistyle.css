@@ -37,7 +37,7 @@ padding-bottom: 0px;
 #setalarmmenu{
 	position: relative;
 	visibility: hidden;
-	overflow: hidden;
+	overflow: visible;
 	background-color:#800000;
 	border: none;
 }

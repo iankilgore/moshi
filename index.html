@@ -31,41 +31,44 @@
       <center>
       <table width="80%" border=1>
         <tr>
-          <td>
-              add left column
+          <td align="right">
+            <table cellpadding="10" cellspacing="0" border="0">
+              <tr>
+                <td>
+                  <div id="alarmIcon">
+                    <a href="#" title="Alarm On Indicator">
+                    <svg width="40" height="40">
+                     <circle cx="20" cy="20" r="13" stroke="black" stroke-width="2" fill="none" />
+
+                     <line x1="20" y1="20" x2="22" y2="30"  style="stroke:rgb(0,0,0);stroke-width:2" />
+                     <line x1="20" y1="20" x2="26" y2="14" style="stroke:rgb(0,0,0);stroke-width:2" />
+
+                     <path d="M 6 10 q 2 -11 12 -6" stroke="black" stroke-width="1" fill="black" />
+                     <path d="M 34 10 q -2 -11 -12 -6" stroke="black" stroke-width="1" fill="black" />
+                    </svg>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div id="ampm"></div>
+                </td>
+              </tr>
+            </table>
           </td>
           <td valign="bottom" align="center">
             <table cellpadding=10 cellspacing=0 border=0>
               <tr>
                 <td>
-                  <table cellpadding="10" cellspacing="0" border="0">
-                    <tr>
-                      <td>
-                        <div id="alarmIcon">
-                          <a href="#" title="Alarm On Indicator">
-                          <svg width="40" height="40">
-                           <circle cx="20" cy="20" r="13" stroke="black" stroke-width="2" fill="none" />
-
-                           <line x1="20" y1="20" x2="22" y2="30"  style="stroke:rgb(0,0,0);stroke-width:2" />
-                           <line x1="20" y1="20" x2="26" y2="14" style="stroke:rgb(0,0,0);stroke-width:2" />
-
-                           <path d="M 6 10 q 2 -11 12 -6" stroke="black" stroke-width="1" fill="black" />
-                           <path d="M 34 10 q -2 -11 -12 -6" stroke="black" stroke-width="1" fill="black" />
-                          </svg>
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div id="ampm"></div>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-                <td>
                   <div id="moshitime"></div>
                 </td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            <table>
+              <tr>
                 <td>
                   <div id="moshidate">
                     <!-- p> Today's fake date is 5/17/15</p> -->
@@ -74,10 +77,6 @@
                 </td>
               </tr>
             </table>
-
-          </td>
-          <td>
-            add right column
           </td>
         </tr>
         <tr>

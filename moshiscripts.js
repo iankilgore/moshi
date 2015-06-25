@@ -46,7 +46,7 @@ function moshiCommand(){
 			hidePopUpWindow('popupcontent');
 			break;
 		case "playsleepsound":
-			alert (newcommand);
+			SoundChoice.play();
 			hidePopUpWindow('popupcontent');
 			break;
 		case "moshidate":

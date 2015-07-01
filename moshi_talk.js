@@ -1,4 +1,4 @@
-function sayTime()
+function sayMoshiTime()
 {
 
   var currentTime=new Date();

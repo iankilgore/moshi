@@ -1,3 +1,33 @@
+function MoshiTime(dateObject)
+{
+	var tempMinutes = dateObject.getMinutes();
+	this.hour = dateObject.getHours();
+		tempAMPM="am";
+    if (this.hour > 11)
+      {
+        if (this.hour != 12)
+          {
+            this.hour=this.hour-12;
+          }
+        tempAMPM="pm";
+      };
+    if (this.hour==0)
+      {
+        this.hour=12;
+      }
+
+
+  this.tens = parseInt(tempMinutes/10);
+  this.ones = tempMinutes % 10;
+  this.ampm = tempAMPM;
+
+  this.sayTime = function()
+  									{
+                    }
+}
+
+
+
 function sayMoshiTime()
 {
 

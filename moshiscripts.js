@@ -1,6 +1,6 @@
 // Global Variables
-var slide_counter = 0;
-var slide_array = [
+	var slide_counter = 0;
+	var slide_array = [
 	"<style>body {background-color: #1a0aff;}</style>",
 	"<style>body {background-color: #00ffff;}</style>",
 	"<style>body {background-color: #00ff55;}</style>",
@@ -10,15 +10,15 @@ var slide_array = [
 
 ];
 
-var slide_element;
-var offon;
-var alarmHour;
-var alarmMinute;
-var alarmAMPM;
-var AlarmChoice;
-var SoundChoice;
-setAlarmChoice("alarm_1");
-setSoundChoice("sound_1");
+	var slide_element;
+	var offon;
+	var alarmHour;
+	var alarmMinute;
+	var alarmAMPM;
+	var AlarmChoice;
+	var SoundChoice;
+	setAlarmChoice("alarm_1");
+	setSoundChoice("sound_1");
 
 // Accept commands for moshi and move to correct function ---------------------
 function moshiCommand(){

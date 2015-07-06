@@ -2,27 +2,45 @@ function MoshiTime(dateObject)
 {
 	var tempMinutes = dateObject.getMinutes();
 	this.hour = dateObject.getHours();
-		tempAMPM="am";
-    if (this.hour > 11)
-      {
-        if (this.hour != 12)
-          {
-            this.hour=this.hour-12;
-          }
-        tempAMPM="pm";
-      };
-    if (this.hour==0)
-      {
-        this.hour=12;
-      }
-
-
   this.tens = parseInt(tempMinutes/10);
-  this.ones = tempMinutes % 10;
   this.ampm = tempAMPM;
 
-  this.sayTime = function()
+  this.setOnes() = function()
+ 									  {
+                      	this.ones = tempMinutes % 10;
+                    }
+  this.setAMPM() = function()
+ 				 						{
+                      tempAMPM="am";
+                      if (this.hour > 11)
+                        {
+                          if (this.hour != 12)
+                            {
+                              this.hour=this.hour-12;
+                            }
+                          tempAMPM="pm";
+                        };
+                      if (this.hour==0)
+                        {
+                          this.hour=12;
+                        }
+  									}
+
+  this.setMoshiTime() = function()
+ 									 	{
+                      	setSayHour();
+    										setSayTensMinute();
+    										setSayOnesMinute();
+    										setSayAMPM();
+  									}
+
+  this.sayTime() = function()
   									{
+                       sayTimeIs.play();
+                       setTimeout(function(){sayHour.play()},1000);
+                       setTimeout(function(){sayTensMinute.play()},1450);
+                       setTimeout(function(){sayOnesMinute.play()},1945);
+                       setTimeout(function(){sayAMPM.play()},2458);
                     }
 }
 
@@ -150,10 +168,6 @@ function sayMoshiTime()
   break;
   }
 
-var durationAudio1 = sayTimeIs.duration;
-var durationAudio2 = sayHour.duration;
-var durationAudio3 = sayTensMinute.duration;
-var durationAudio4 = sayOnesMinute.duration;
 
 sayTimeIs.play();
  setTimeout(function(){sayHour.play()},1000);

@@ -5,8 +5,6 @@ function MoshiTime(dateObject)
   var sayHour=document.createElement("AUDIO");
 	var sayOnesMinute=document.createElement("AUDIO");
 	var sayAMPM=document.createElement("AUDIO");
-	var sayTimeIs=document.createElement("AUDIO");
-  	sayTimeIs.src="moshivoice/the_time_is.wav";
 
   this.setHour= function() {
     									this.hour = dateObject.getHours();
@@ -20,7 +18,7 @@ function MoshiTime(dateObject)
                     }
   this.setAMPM= function()
  				 						{
-                      tempAMPM="am";
+                      var tempAMPM="am";
                       if (this.hour > 11)
                         {
                           if (this.hour != 12)
@@ -38,19 +36,19 @@ function MoshiTime(dateObject)
 
   this.setMoshiTime= function()
  									 	{
-    										setHour();
-    										setTens();
-    										setOnes();
-    										setAMPM();
-                      	setSayHour();
-    										setSayTensMinute();
-    										setSayOnesMinute();
-    										setSayAMPM();
+    										this.setHour();
+    										this.setTens();
+    										this.setOnes();
+    										this.setAMPM();
+                      	this.setSayHour();
+    										this.setSayTensMinute();
+    										this.setSayOnesMinute();
+    										this.setSayAMPM();
   									}
 
   this.setSayHour= function() {
 
-          switch (hour) {
+          switch (this.hour) {
           case 1 :
           sayHour.src="moshivoice/1.wav";
           break;
@@ -92,7 +90,7 @@ function MoshiTime(dateObject)
 
   this.setSayOnesMinute= function() {
 
-          switch (ones) {
+          switch (this.ones) {
           case 0 :
           sayOnesMinute.src="moshivoice/oh.wav";
           break;
@@ -127,7 +125,7 @@ function MoshiTime(dateObject)
   }
   this.setSayTensMinute= function() {
 
-      switch (tens) {
+      switch (this.tens) {
       case 0 :
       sayTensMinute.src="moshivoice/oh.wav";
       break;
@@ -148,9 +146,16 @@ function MoshiTime(dateObject)
       break;
       }
   }
+	this.setSayAMPM= function() {
+		if (this.ampm=="am") {
+			sayAMPM.src="moshivoice/am.wav";
+		} else {
+			sayAMPM.src="moshivoice/pm.wav";
+		}
+	}
+
   this.sayTime= function()
   									{
-                       sayTimeIs.play();
                        setTimeout(function(){sayHour.play()},1000);
                        setTimeout(function(){sayTensMinute.play()},1450);
                        setTimeout(function(){sayOnesMinute.play()},1945);

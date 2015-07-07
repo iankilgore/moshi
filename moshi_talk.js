@@ -157,8 +157,8 @@ function MoshiTime(dateObject)
   this.sayTime= function()
   									{
                        sayHour.play();
-                       setTimeout(function(){sayTensMinute.play()},1450);
-                       setTimeout(function(){sayOnesMinute.play()},1945);
-                       setTimeout(function(){sayAMPM.play()},2458);
+                       setTimeout(function(){sayTensMinute.play()},650);
+                       setTimeout(function(){sayOnesMinute.play()},1100);
+                       setTimeout(function(){sayAMPM.play()},1763);
                     }
 }

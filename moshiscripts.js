@@ -30,9 +30,6 @@ function moshiCommand(){
 			hidePopUpWindow('popupcontent');
 			break;
 		case "alarm":
-			var alarmIsSetTo=document.createElement("AUDIO");
-			alarmIsSetTo.src="moshivoice/the-alarm-is-set-to.wav";
-			alarmIsSetTo.play();
 			sayAlarmTime();
 			hidePopUpWindow('popupcontent');
 			break;
@@ -141,10 +138,13 @@ function checkAlarm(){
 }
 
 function sayAlarmTime() {
+	var alarmIsSetTo=document.createElement("AUDIO");
+	alarmIsSetTo.src="moshivoice/the-alarm-is-set-to.wav";
+	alarmIsSetTo.play();
 	var testDate = new Date();
 	var test= new MoshiTime(testDate);
 	test.setMoshiTime();
-	test.sayTime();
+	setTimeout(function(){test.sayTime();},500);
 
 }
 // set alarm functions -------------------------------------------------------

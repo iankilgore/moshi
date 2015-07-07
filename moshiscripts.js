@@ -30,7 +30,7 @@ function moshiCommand(){
 			hidePopUpWindow('popupcontent');
 			break;
 		case "alarm":
-			AlarmChoice.play();
+			sayAlarmTime();
 			hidePopUpWindow('popupcontent');
 			break;
 		case "setalarm":
@@ -137,6 +137,13 @@ function checkAlarm(){
 		}
 }
 
+function sayAlarmTime() {
+	var testDate = new Date();
+	var test= new MoshiTime(testDate);
+	test.setMoshiTime();
+	test.sayTime();
+
+}
 // set alarm functions -------------------------------------------------------
 function setAlarmTime(){
 	showCustomPopUpWindow (-531,0,300,100, 'setalarmmenu')

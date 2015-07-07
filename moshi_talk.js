@@ -6,7 +6,7 @@ function MoshiTime(dateObject)
 	var sayOnesMinute=document.createElement("AUDIO");
 	var sayAMPM=document.createElement("AUDIO");
 
-	this.setMoshiTime();
+	setMoshiTime(dateObject);
 
   this.setHour= function() {
     									this.hour = dateObject.getHours();

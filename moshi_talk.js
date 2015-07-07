@@ -1,7 +1,10 @@
 function MoshiTime(dateObject)
 {
 	var tempMinutes = dateObject.getMinutes();
-
+	var sayTensMinute=document.createElement("AUDIO");
+  var sayHour=document.createElement("AUDIO");
+	var sayOnesMinute=document.createElement("AUDIO");
+	
   this.setHour() = function() {
     									this.hour = dateObject.getHours();
   									}
@@ -43,8 +46,8 @@ function MoshiTime(dateObject)
   									}
 
   this.setSayHour() = function() {
-      var sayHour=document.createElement("AUDIO");
-          switch (currentHour) {
+
+          switch (hour) {
           case 1 :
           sayHour.src="moshivoice/1.wav";
           break;
@@ -85,8 +88,8 @@ function MoshiTime(dateObject)
   }
 
   this.setSayOnesMinute() {
-					var sayOnesMinute=document.createElement("AUDIO");
-          switch (currentOnes) {
+
+          switch (ones) {
           case 0 :
           sayOnesMinute.src="moshivoice/oh.wav";
           break;
@@ -120,8 +123,8 @@ function MoshiTime(dateObject)
           }
   }
   this.setSayTensMinute() = function() {
-    	var sayTensMinute=document.createElement("AUDIO");
-      switch (currentTens) {
+
+      switch (tens) {
       case 0 :
       sayTensMinute.src="moshivoice/oh.wav";
       break;

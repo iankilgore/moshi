@@ -144,7 +144,7 @@ function sayAlarmTime() {
 	var testDate = new Date();
 	var test= new MoshiTime(testDate);
 	test.setMoshiTime();
-	setTimeout(function(){test.sayTime();},500);
+	setTimeout(function(){test.sayTime();},1250);
 
 }
 // set alarm functions -------------------------------------------------------

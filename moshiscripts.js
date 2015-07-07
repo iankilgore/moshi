@@ -31,7 +31,7 @@ function moshiCommand(){
 			break;
 		case "alarm":
 			var alarmIsSetTo=document.createElement("AUDIO");
-			alarmIsSetTo.src="";
+			alarmIsSetTo.src="moshivoice/the-alarm-is-set-to.wav";
 			alarmIsSetTo.play();
 			sayAlarmTime();
 			hidePopUpWindow('popupcontent');

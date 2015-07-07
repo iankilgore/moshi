@@ -30,6 +30,9 @@ function moshiCommand(){
 			hidePopUpWindow('popupcontent');
 			break;
 		case "alarm":
+			var alarmIsSetTo=document.createElement("AUDIO");
+			alarmIsSetTo.src="";
+			alarmIsSetTo.play();
 			sayAlarmTime();
 			hidePopUpWindow('popupcontent');
 			break;

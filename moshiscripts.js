@@ -47,6 +47,8 @@ function moshiCommand(){
 			break;
 		case "playsleepsound":
 			SoundChoice.play();
+			onNightLight();
+			setTimeout(function(){offNightLight},10000);
 			hidePopUpWindow('popupcontent');
 			break;
 		case "moshidate":

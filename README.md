@@ -1,0 +1,1 @@
+This is a simulation of the moshi alarm clock from brookstone, most functions are included in here. I also put most of the easter eggs in there too. You may be unfamiliar with this alarm clock but you will figure it out. Also if there was anything you wanted added into moshior caught anything that is in moshi that isn't in here please let us know.

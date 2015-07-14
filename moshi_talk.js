@@ -41,11 +41,15 @@ function MoshiTime(dateObject)
     										this.setOnes();
     										this.setAMPM();
                       	this.setSayHour();
+												if (this.tens == 1)
+												{
+													this.setTeensMinute
+												}else{
     										this.setSayTensMinute();
     										this.setSayOnesMinute();
+											}
     										this.setSayAMPM();
-  									}
-
+                    }
   this.setSayHour= function() {
 
           switch (this.hour) {

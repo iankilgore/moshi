@@ -138,7 +138,16 @@ function checkAlarm(){
 			}
 		}
 }
+function sayTime() {
+	var time = new Date();
+	var timeIs=document.createElement("AUDIO");
+	timeIs.src="moshivoice/the_time_is.wav";
+	timeIs.play();
+	var test= new MoshiTime(time);
+	test.setMoshiTime();
+	setTimeout(function(){test.sayTime();},1250);
 
+}
 function sayAlarmTime() {
 	var alarmTime = new Date();
 	alarmTime.setMinutes(alarmMinute);

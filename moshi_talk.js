@@ -41,14 +41,11 @@ function MoshiTime(dateObject)
     										this.setOnes();
     										this.setAMPM();
                       	this.setSayHour();
-	//											if (this.tens == 1) {
-	//												this.setTeensMinute();
-//												} else {
-    											this.setSayTensMinute();
-    											this.setSayOnesMinute();
-//												}
+    										this.setSayTensMinute();
+    										this.setSayOnesMinute();
     										this.setSayAMPM();
-                    }
+  									}
+
   this.setSayHour= function() {
 
           switch (this.hour) {
@@ -92,6 +89,7 @@ function MoshiTime(dateObject)
   }
 
   this.setSayOnesMinute= function() {
+
           switch (this.ones) {
           case 0 :
           sayOnesMinute.src="moshivoice/oh.wav";
@@ -125,42 +123,6 @@ function MoshiTime(dateObject)
           break;
           }
   }
-
-	this.setSayTeensMinute= function() {
-			sayOnesMinute.src="moshivoice/oh.wav";
-			switch (this.ones) {
-			case 0 :
-			sayTensMinute.src="moshivoice/10.wav";
-			break;
-			case 1 :
-			sayTensMinute.src="moshivoice/11.wav";
-			break;
-			case 2 :
-			sayTensMinute.src="moshivoice/12.wav";
-			break;
-			case 3 :
-			sayTensMinute.src="moshivoice/13.wav";
-			break;
-			case 4 :
-			sayTensMinute.src="moshivoice/14.wav";
-			break;
-			case 5 :
-			sayTensMinute.src="moshivoice/15.wav";
-			break;
-			case 6 :
-			sayOnesMinute.src="moshivoice/16.wav";
-			break;
-			case 7 :
-			sayOnesMinute.src="moshivoice/17.wav";
-			break;
-			case 8 :
-			sayOnesMinute.src="moshivoice/18.wav";
-			break;
-			case 9 :
-			sayOnesMinute.src="moshivoice/19.wav";
-			break;
-			}
-
   this.setSayTensMinute= function() {
 
       switch (this.tens) {
@@ -196,9 +158,7 @@ function MoshiTime(dateObject)
   									{
                        sayHour.play();
                        setTimeout(function(){sayTensMinute.play()},650);
-											 if (this.tens != 1) {
-                       	setTimeout(function(){sayOnesMinute.play()},1100);
-										 	 }
+                       setTimeout(function(){sayOnesMinute.play()},1100);
                        setTimeout(function(){sayAMPM.play()},1763);
                     }
 }

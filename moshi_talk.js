@@ -41,12 +41,12 @@ function MoshiTime(dateObject)
     										this.setOnes();
     										this.setAMPM();
                       	this.setSayHour();
-												if (this.tens == 1) {
-													this.setTeensMinute
-												} else {
+	//											if (this.tens == 1) {
+	//												this.setTeensMinute();
+//												} else {
     											this.setSayTensMinute();
     											this.setSayOnesMinute();
-												}
+//												}
     										this.setSayAMPM();
                     }
   this.setSayHour= function() {
@@ -92,7 +92,6 @@ function MoshiTime(dateObject)
   }
 
   this.setSayOnesMinute= function() {
-
           switch (this.ones) {
           case 0 :
           sayOnesMinute.src="moshivoice/oh.wav";
@@ -128,7 +127,7 @@ function MoshiTime(dateObject)
   }
 
 	this.setSayTeensMinute= function() {
-
+			sayOnesMinute.src="moshivoice/oh.wav";
 			switch (this.ones) {
 			case 0 :
 			sayTensMinute.src="moshivoice/10.wav";

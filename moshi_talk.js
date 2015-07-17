@@ -41,8 +41,12 @@ function MoshiTime(dateObject)
     										this.setOnes();
     										this.setAMPM();
                       	this.setSayHour();
-    										this.setSayTensMinute();
-    										this.setSayOnesMinute();
+												if (this.tens == 1) {
+													this.setSayTeensMinute();
+												} else {
+													this.setSayTensMinute();
+	    										this.setSayOnesMinute();
+												}
     										this.setSayAMPM();
   									}
 
@@ -146,6 +150,51 @@ function MoshiTime(dateObject)
       break;
       }
   }
+	this.setSayTeensMinute= function() {
+		sayOnesMinute.src="moshivoice/blank.wav"
+		if (this.ones == 0)
+		{
+			sayTensMinute.src="moshivoice/10.wav";
+		}
+		if (this.ones == 1)
+		{
+			sayTensMinute.src="moshivoice/11.wav";
+		}
+		if (this.ones == 2)
+		{
+			sayTensMinute.src="moshivoice/12.wav";
+		}
+		if (this.ones == 3)
+		{
+			sayTensMinute.src="moshivoice/13.wav";
+		}
+		if (this.ones == 4)
+		{
+			sayTensMinute.src="moshivoice/14.wav";
+		}
+		if (this.ones == 5)
+		{
+			sayTensMinute.src="moshivoice/15.wav";
+		}
+		if (this.ones == 6)
+		{
+			sayTensMinute.src="moshivoice/16.wav";
+		}
+		if (this.ones == 7)
+		{
+			sayTensMinute.src="moshivoice/17.wav";
+		}
+		if (this.ones == 8)
+		{
+			sayTensMinute.src="moshivoice/18.wav";
+		}
+		if (this.ones == 9)
+		{
+			sayTensMinute.src="moshivoice/19.wav";
+		}
+	}
+
+
 	this.setSayAMPM= function() {
 		if (this.ampm=="am") {
 			sayAMPM.src="moshivoice/am.wav";

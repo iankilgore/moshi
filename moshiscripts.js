@@ -163,6 +163,9 @@ function sayAlarmTime() {
 }
 // set alarm functions -------------------------------------------------------
 function setAlarmTime(){
+	var alarmSet=document.createElement("AUDIO");
+	alarmSet.src="moshivoice/alarm-to-sound.wav";
+	alarmSet.play();
 	showCustomPopUpWindow (-531,0,300,100, 'setalarmmenu')
 }
 

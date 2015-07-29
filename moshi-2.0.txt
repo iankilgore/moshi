@@ -1,0 +1,331 @@
+
+properties
+
+time
+facecolor
+date
+day
+alarm Hide time will be triggered whenever something else displays.
+
+sleep sound
+alarm on off
+ampm
+face on off
+alarm time
+temperature
+sleep sound on off
+currentCommand
+functions
+
+getTime
+	Get time will return the current time.
+It will use the javascript Date() object and put the time in a twelve hour format and store the information in the variables
+in our object that currently are hour,tensMinute,onesMinute, ampm
+
+
+setTime
+	Set time will set the time once the current time is loaded.
+
+displayTime
+Display time will show the time. The time is going to be in a <div></div> with an id of moshiTime. Then we will use the jQuery show to turn on the display.
+$(document).ready(function(){
+    $(".moshiTime").show();
+});
+
+displayMoshiFace
+	will show the clock and do everything it's doing right now.  It will call displayTime.  It might also call display alarmIcon. displayDate, displayLightSwitch
+
+hideTime
+	Hide time will be triggered whenever something else displays.
+
+sayTime
+	 Say time will say the time, it goes with the time command.
+        function MoshiTime(dateObject)
+        {
+          var tempMinutes = dateObject.getMinutes();
+          var sayTensMinute=document.createElement("AUDIO");
+          var sayHour=document.createElement("AUDIO");
+          var sayOnesMinute=document.createElement("AUDIO");
+          var sayAMPM=document.createElement("AUDIO");
+
+          this.setHour= function() {
+                              this.hour = dateObject.getHours();
+                            }
+          this.setOnes= function()
+                            {
+                                this.ones = tempMinutes % 10;
+                            }
+          this.setTens= function() {
+                                this.tens = parseInt(tempMinutes/10);
+                            }
+          this.setAMPM= function()
+                            {
+                              var tempAMPM="am";
+                              if (this.hour > 11)
+                                {
+                                  if (this.hour != 12)
+                                    {
+                                      this.hour=this.hour-12;
+                                    }
+                                  tempAMPM="pm";
+                                };
+                              if (this.hour==0)
+                                {
+                                  this.hour=12;
+                                }
+                              this.ampm = tempAMPM;
+                            }
+
+          this.setMoshiTime= function()
+                            {
+                                this.setHour();
+                                this.setTens();
+                                this.setOnes();
+                                this.setAMPM();
+                                this.setSayHour();
+                                if (this.tens == 1) {
+                                  this.setSayTeensMinute();
+                                } else {
+                                  this.setSayTensMinute();
+                                  this.setSayOnesMinute();
+                                }
+                                this.setSayAMPM();
+                            }
+
+          this.setSayHour= function() {
+
+                  switch (this.hour) {
+                  case 1 :
+                  sayHour.src="moshivoice/1.wav";
+                  break;
+                  case 2 :
+                  sayHour.src="moshivoice/2.wav";
+                  break;
+                  case 3 :
+                  sayHour.src="moshivoice/3.wav";
+                  break;
+                  case 4 :
+                  sayHour.src="moshivoice/4.wav";
+                  break;
+                  case 5 :
+                  sayHour.src="moshivoice/5.wav";
+                  break;
+                  case 6 :
+                  sayHour.src="moshivoice/6.wav";
+                  break;
+                  case 7 :
+                  sayHour.src="moshivoice/7.wav";
+                  break;
+                  case 8 :
+                  sayHour.src="moshivoice/8.wav";
+                  break;
+                  case 9 :
+                  sayHour.src="moshivoice/9.wav";
+                  break;
+                  case 10 :
+                  sayHour.src="moshivoice/10.wav";
+                  break;
+                  case 11 :
+                  sayHour.src="moshivoice/11.wav";
+                  break;
+                  case 12 :
+                  sayHour.src="moshivoice/12.wav";
+                  break;
+                  }
+          }
+
+          this.setSayOnesMinute= function() {
+
+                  switch (this.ones) {
+                  case 0 :
+                  sayOnesMinute.src="moshivoice/oh.wav";
+                  break;
+                  case 1 :
+                  sayOnesMinute.src="moshivoice/1.wav";
+                  break;
+                  case 2 :
+                  sayOnesMinute.src="moshivoice/2.wav";
+                  break;
+                  case 3 :
+                  sayOnesMinute.src="moshivoice/3.wav";
+                  break;
+                  case 4 :
+                  sayOnesMinute.src="moshivoice/4.wav";
+                  break;
+                  case 5 :
+                  sayOnesMinute.src="moshivoice/5.wav";
+                  break;
+                  case 6 :
+                  sayOnesMinute.src="moshivoice/6.wav";
+                  break;
+                  case 7 :
+                  sayOnesMinute.src="moshivoice/7.wav";
+                  break;
+                  case 8 :
+                  sayOnesMinute.src="moshivoice/8.wav";
+                  break;
+                  case 9 :
+                  sayOnesMinute.src="moshivoice/9.wav";
+                  break;
+                  }
+          }
+          this.setSayTensMinute= function() {
+
+              switch (this.tens) {
+              case 0 :
+              sayTensMinute.src="moshivoice/oh.wav";
+              break;
+              case 1 :
+              sayTensMinute.src="moshivoice/oh.wav";
+              break;
+              case 2 :
+              sayTensMinute.src="moshivoice/20.wav";
+              break;
+              case 3 :
+              sayTensMinute.src="moshivoice/30.wav";
+              break;
+              case 4 :
+              sayTensMinute.src="moshivoice/40.wav";
+              break;
+              case 5 :
+              sayTensMinute.src="moshivoice/50.wav";
+              break;
+              }
+          }
+          this.setSayTeensMinute= function() {
+            sayOnesMinute.src="moshivoice/blank.wav"
+            if (this.ones == 0)
+            {
+              sayTensMinute.src="moshivoice/10.wav";
+            }
+            if (this.ones == 1)
+            {
+              sayTensMinute.src="moshivoice/11.wav";
+            }
+            if (this.ones == 2)
+            {
+              sayTensMinute.src="moshivoice/12.wav";
+            }
+            if (this.ones == 3)
+            {
+              sayTensMinute.src="moshivoice/13.wav";
+            }
+            if (this.ones == 4)
+            {
+              sayTensMinute.src="moshivoice/14.wav";
+            }
+            if (this.ones == 5)
+            {
+              sayTensMinute.src="moshivoice/15.wav";
+            }
+            if (this.ones == 6)
+            {
+              sayTensMinute.src="moshivoice/16.wav";
+            }
+            if (this.ones == 7)
+            {
+              sayTensMinute.src="moshivoice/17.wav";
+            }
+            if (this.ones == 8)
+            {
+              sayTensMinute.src="moshivoice/18.wav";
+            }
+            if (this.ones == 9)
+            {
+              sayTensMinute.src="moshivoice/19.wav";
+            }
+          }
+
+
+          this.setSayAMPM= function() {
+            if (this.ampm=="am") {
+              sayAMPM.src="moshivoice/am.wav";
+            } else {
+              sayAMPM.src="moshivoice/pm.wav";
+            }
+          }
+
+          this.sayTime= function()
+                            {
+                               sayHour.play();
+                               setTimeout(function(){sayTensMinute.play()},650);
+                               setTimeout(function(){sayOnesMinute.play()},1000);
+                               setTimeout(function(){sayAMPM.play()},1463);
+                            }
+        }
+getFaceColor
+	 Get face color will get the current color moshi is on.
+
+setFaceColor
+	Set face color will change it during another time.
+
+displayFaceColor
+	 Display face color will make it so that it displays that desired color.
+
+getDate
+	 Get date will get the current date.
+
+setDate
+	Set date will set the date variable just like the time.
+
+displayDate
+	 Display date will display the date.
+
+sayDate
+	Say date will say the date just like the time.
+
+getDay
+	Get day i think will get the current day of the week or month.
+
+setDay
+  Set day will set the day of the week or month it got.
+displayDay
+  Display day will display it just how everything else was.
+sayDay
+setAlarmTime
+  Set alarm time makes it so that you can set the alarm time.
+turnAlarmOn
+  Turn alarm on and off enables you to turn on and off the alarm.
+turnAlarmOff
+getAlarmTime
+  Get alarm time will grab the alarm time.
+checkAlarmTime
+	Check alarm time makes it so that it checks the alarm for making different functions work.
+getAlarmSound
+  Get alarm sound will look at what the alarm sound is at so that when the alarm is set, the correct alarm sound is played.
+setAlarmSound
+  Set alarm sound will be triggered when you select an alarm sound.
+turnAlarmSoundOn
+  Not sure what Turn alarm sound on and off do exactly.
+turnAlarmSoundOff
+displayAlarmIcon
+  Display alarm icon is triggered when the alarm is turned on.
+hideAlarmIcon
+  hide alarm icon means when alarm is turned off.
+getSleepSound
+  get and set sleep sound will get and set the current sleep sound number.
+setSleepSound
+turnSleepSoundOn
+  Turn sleep sound on will be triggered when you click play sleep sound.
+turnSleepSoundOff
+  Turn sleep sound off is triggered when the sleep sound is done.
+startNightLight
+  Start night light be triggered when night light is clicked.
+stopNightLight
+  Same with off.
+getTemperature
+  Get temperature will get the temperature from the widget.
+setTemperature
+	Set temperature will set the temperature variable.
+displayTemperature
+	Display temperature will display the temperature on moshi's display.
+sayTemperature
+	Say temperature will make it so that moshi will say the temperature.
+hideTemperature
+	Hide temperature will be triggered when the function times out.
+acceptCommand
+	 Accept command will look at the command you chose.
+displayDialogBox
+	Display dialog box will display the command dialog box.
+hideDialogBox
+	 Hide dialog box is triggered when you select a command.

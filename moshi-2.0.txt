@@ -5,7 +5,7 @@ time
 facecolor
 date
 day
-alarm Hide time will be triggered whenever something else displays.
+alarm
 
 sleep sound
 alarm on off

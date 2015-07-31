@@ -6,7 +6,6 @@ facecolor
 date
 day
 alarm
-
 sleep sound
 alarm on off
 ampm

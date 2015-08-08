@@ -22,13 +22,13 @@ function Moshi()
 
   this.setTime=function() {
     							// setTime will set the time for a Moshi object.
-
+                  this.currentTime=new Date();
   }
 
   this.getTime=function() {
     							// getTime will return the current time stored in the Moshi object.
-                  x=new Date();
-                  return x;
+
+                  return this.currentTime;
   }
 
   this.displayTime=function() {

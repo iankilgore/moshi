@@ -61,7 +61,7 @@ function Moshi()
 
   this.setFaceColor=function() {
     						// Set face color will change it during another time.
-    this.faceColor="#1a0aff";
+    this.faceColor=newColor;
   }
 
   this.displayFaceColor=function() {

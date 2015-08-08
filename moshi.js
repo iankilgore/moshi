@@ -56,10 +56,12 @@ function Moshi()
 
   this.getFaceColor=function() {
     						// Get face color will get the current color moshi is on.
+    return this.faceColor;
   }
 
   this.setFaceColor=function() {
     						// Set face color will change it during another time.
+    this.faceColor="#1a0aff";
   }
 
   this.displayFaceColor=function() {

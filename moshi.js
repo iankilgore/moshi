@@ -27,7 +27,7 @@ function Moshi()
 
   this.getTime=function() {
     							// getTime will return the current time stored in the Moshi object.
-
+                  return 5;
   }
 
   this.displayTime=function() {
@@ -164,3 +164,5 @@ function Moshi()
   this.hideDialogBox=function() {
     						// Hide dialog box is triggered when you select a command.
   }
+
+}

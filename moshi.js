@@ -27,7 +27,8 @@ function Moshi()
 
   this.getTime=function() {
     							// getTime will return the current time stored in the Moshi object.
-                  return 5;
+                  x=new Date();
+                  return x;
   }
 
   this.displayTime=function() {

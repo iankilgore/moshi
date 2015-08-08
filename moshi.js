@@ -64,7 +64,7 @@ function Moshi()
     this.faceColor=newColor;
   }
 
-  this.displayFaceColor=function() {
+  this.displayFaceColor=function(newColor) {
     						// Display face color will make it so that it displays that desired color.
   }
 

@@ -59,12 +59,12 @@ function Moshi()
     return this.faceColor;
   }
 
-  this.setFaceColor=function() {
+  this.setFaceColor=function(newColor) {
     						// Set face color will change it during another time.
     this.faceColor=newColor;
   }
 
-  this.displayFaceColor=function(newColor) {
+  this.displayFaceColor=function() {
     						// Display face color will make it so that it displays that desired color.
   }
 

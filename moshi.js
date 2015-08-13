@@ -148,21 +148,19 @@ function Moshi()
   this.startNightLight=function() {
     						// Start night light be triggered when night light is clicked.
   }
-  this.stopNightLight=function() {
-    						// Same with off.
-                var slide_array = [
-              	"<style>body {background-color: #1a0aff;}</style>",
-              	"<style>body {background-color: #00ffff;}</style>",
-              	"<style>body {background-color: #00ff55;}</style>",
-              	"<style>body {background-color: #a8ff64;}</style>",
-              	"<style>body {background-color: #de0614;}</style>",
-              	"<style>body {background-color: #a806de;}</style>",
+  this.playNightLight=function() {
+    						// The night light should run for 5 minutes or until the screen is clicked while the sleep sound is on.
+    						// The night light should run for 5 minutes or until cancelled by command otherwise.
+    						// The colors switch every 3 seconds.
+		var nightLightColorCounter;
+    var nightLightColorArray = ["#1a0aff","#00ffff","#00ff55","#a8ff64","#de0614","#a806de"];
+    nightLightColorCounter++;
+    if(nightLightColorCounter > (nightLightColorArray.length - 1)){
+      nightLightColorCounter = 0;
+    }
+    this.setFaceColor(nightLightColorArray[nightLightColorCounter]);
+    this.displayFaceColor();
 
-              ];
-              slide_counter++;
-            	if(slide_counter > (slide_array.length - 1)){
-            		slide_counter = 0;
-            	}
   }
   this.getTemperature=function() {
     						// Get temperature will get the temperature from the widget.

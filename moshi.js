@@ -71,13 +71,14 @@ function Moshi()
 
   this.getDate=function() {
     						// Get date will get the current date.
-                  this.currentDate=new Date();
+                alert (this.currentDate);
                   return this.currentDate;
   }
 
   this.setDate=function() {
     						// Set date will set the date variable just like the time.
                 this.currentDate=new Date();
+
   }
 
   this.displayDate=function() {
@@ -88,7 +89,7 @@ function Moshi()
   this.SayDate=function() {
     						// Say date will say the date just like the time.
   }
-  this.getDate=function() {
+  this.getDay=function() {
     						// Get day i think will get the current day of the week or month.
   }
   this.setDay=function() {

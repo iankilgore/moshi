@@ -17,6 +17,10 @@
          <td>test the getFaceColor function:</td>
          <td id="secondtest"></td>
         </tr>
+        <tr>
+          <td>test the displayDate function:</td>
+          <td id="thirdtest"></td>
+        </tr>
    </table>
 <script>
 test.setTime();
@@ -24,6 +28,8 @@ test.setFaceColor("#1a0aff");
 test.displayFaceColor();
 document.getElementById("firsttest").innerHTML=test.getTime();
 document.getElementById("secondtest").innerHTML=test.getFaceColor();
+test.setDate();
+document.getElementById("thirdtest").innerHTML=test.displayDate();
 </script>
 </body>
 </html>

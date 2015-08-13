@@ -71,7 +71,6 @@ function Moshi()
 
   this.getDate=function() {
     						// Get date will get the current date.
-                alert (this.currentDate);
                   return this.currentDate;
   }
 

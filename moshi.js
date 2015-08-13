@@ -66,7 +66,7 @@ function Moshi()
 
   this.displayFaceColor=function() {
     						// Display face color will make it so that it displays that desired color.
-                document.body.style.backgroundColor=this.facecolor;
+                document.body.style.backgroundColor=this.getFaceColor();
   }
 
   this.getDate=function() {

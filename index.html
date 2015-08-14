@@ -11,6 +11,10 @@
     <script src="moshiscripts.js"></script>
     <script src="moshi_talk.js"></script>
 <script src="jquery-1.11.3.min.js"></script>
+<script src="moshi.js"></script>
+<script>
+ var test=new Moshi();
+ </script>
   </head>
   <body onload="startTime(); onNightLight(); offNightLight();">
     <table width=100% height=100% cellpadding=0 cellspacing=0>
@@ -94,7 +98,7 @@
                   <div id="popupcontent">
                     <p>
                       Welcome, command please.
-                      <select id="commands" onchange="moshiCommand()">
+                      <select id="commands" onchange="test.acceptCommand();">
                         <option value="--SELECT--">--SELECT COMMAND--</option>
                         <option value="time">Time</option>
                         <option value="alarm">Alarm</option>

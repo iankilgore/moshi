@@ -184,33 +184,33 @@ function Moshi()
               			break;
               		case "alarm":
               			sayAlarmTime();
-              			hidePopUpWindow('popupcontent');
+              			$("#popupcontent").hide();
               			break;
               		case "setalarm":
               			setAlarmTime();
-              			hidePopUpWindow('popupcontent');
+              			$("#popupcontent").hide();
               			break;
               		case "alarmsound":
               			chooseAlarmSound();
-              			hidePopUpWindow('popupcontent');
+              			$("#popupcontent").hide();
               			break;
               		case "sleepsound":
               			chooseSleepSound();
-              			hidePopUpWindow('popupcontent');
+              			$("#popupcontent").hide();
               			break;
               		case "playsleepsound":
               			SoundChoice.play();
               			onNightLight();
               			setTimeout(function(){offNightLight();blackbrown('on');},300000);
-              			hidePopUpWindow('popupcontent');
+              			$("#popupcontent").hide();
               			break;
               		case "moshidate":
               			showMoshiDate();
-              			hidePopUpWindow('popupcontent');
+              			$("#popupcontent").hide();
               			break;
               		case "temperature":
               			OpenWeatherWidget();
-              			hidePopUpWindow('popupcontent');
+              			$("#popupcontent").hide();
               			$(document).ready(function(){
               				var temperature=document.getElementsByClassName("aw-temperature-today")[0].innerHTML;
               				alert (temperature);
@@ -218,7 +218,7 @@ function Moshi()
               			break;
               		case "nightlight":
               			onNightLight();
-              			hidePopUpWindow('popupcontent');
+              			$("#popupcontent").hide();
               			break;
               	}
   }

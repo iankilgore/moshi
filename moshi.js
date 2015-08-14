@@ -180,7 +180,11 @@ function Moshi()
                 switch(newCommand){
               		case "time":
               			sayTime ();
-              			hidePopUpWindow('popupcontent');
+                    $(document).ready(function(){
+                        $(".popupcontent").click(function(){
+                          $(this).hide();
+                      });
+                  });
               			break;
               		case "alarm":
               			sayAlarmTime();

@@ -20,55 +20,6 @@
 	setAlarmChoice("alarm_1");
 	setSoundChoice("sound_1");
 
-// Accept commands for moshi and move to correct function ---------------------
-function moshiCommand(){
-	var newCommand=document.getElementById("commands").value;
-
-	switch(newCommand){
-		case "time":
-			sayTime ();
-			hidePopUpWindow('popupcontent');
-			break;
-		case "alarm":
-			sayAlarmTime();
-			hidePopUpWindow('popupcontent');
-			break;
-		case "setalarm":
-			setAlarmTime();
-			hidePopUpWindow('popupcontent');
-			break;
-		case "alarmsound":
-			chooseAlarmSound();
-			hidePopUpWindow('popupcontent');
-			break;
-		case "sleepsound":
-			chooseSleepSound();
-			hidePopUpWindow('popupcontent');
-			break;
-		case "playsleepsound":
-			SoundChoice.play();
-			onNightLight();
-			setTimeout(function(){offNightLight();blackbrown('on');},300000);
-			hidePopUpWindow('popupcontent');
-			break;
-		case "moshidate":
-			showMoshiDate();
-			hidePopUpWindow('popupcontent');
-			break;
-		case "temperature":
-			OpenWeatherWidget();
-			hidePopUpWindow('popupcontent');
-			$(document).ready(function(){
-				var temperature=document.getElementsByClassName("aw-temperature-today")[0].innerHTML;
-				});
-			break;
-		case "nightlight":
-			onNightLight();
-			hidePopUpWindow('popupcontent');
-			break;
-	}
-
-}
 
 // Moshi Weather functions -----------------------------------------------------
 function OpenWeatherWidget()

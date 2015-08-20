@@ -230,11 +230,11 @@ function Moshi()
                 var newCommand=document.getElementById("commands").value;
                 switch(newCommand){
               		case "time":
-              			test.sayTime ();
-                      $("#popupcontent").hide();
+              			this.sayTime();
+                    $("#popupcontent").hide();
               			break;
               		case "alarm":
-              			test.sayAlarmTime();
+              			this.sayAlarmTime();
               			$("#popupcontent").hide();
               			break;
               		case "setalarm":

@@ -51,6 +51,13 @@ function Moshi()
 
   this.sayTime=function() {
   							// Say time will say the time by putting together the audio files for the current time.
+    var timeIs=document.createElement("AUDIO");
+    timeIs.src="moshivoice/the_time_is.wav";
+    timeIs.play();
+    this.setTime();
+    var timeToSay= new MoshiTime(this.getTime(););
+    timeToSay.setMoshiTime();
+    setTimeout(function(){timeToSay.sayTime();},1250);
 
   }
 

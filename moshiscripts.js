@@ -114,7 +114,7 @@ function sayAlarmTime() {
 
 }
 // set alarm functions -------------------------------------------------------
-function setAlarmTime(){
+function chooseAlarmTime(){
 	var alarmSet=document.createElement("AUDIO");
 	alarmSet.src="moshivoice/alarm-to-sound.wav";
 	alarmSet.play();

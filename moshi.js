@@ -14,6 +14,9 @@ function Moshi()
   var temperature;
 
   var alarmTime;
+  var alarmHour;
+  var alarmMinute;
+  var alarmAMPM;
   var alarmSound;
 	var alarmOnOff;
   var alarmTime;
@@ -109,15 +112,56 @@ function Moshi()
   }
   this.setAlarmTime=function() {
     						// Set alarm time makes it so that you can set the alarm time.
+
+
+				this.setAlarmMinute();
+    		this.setAlarmHour();
+    		this.setAlarmAMPM();
+        this.alarmTime = new Date();
+        this.alarmTime.setMinutes(this.getAlarmMinute());
+      	this.alarmTime.setHours(this.getAlarmHour());
   }
+  this.sayAlarmTime=function() {
+    						// speaks the time the alarm is set to
+        var alarmIsSetTo=document.createElement("AUDIO");
+        alarmIsSetTo.src="moshivoice/the-alarm-is-set-to.wav";
+        alarmIsSetTo.play();
+
+        var alarmToSay= new MoshiTime(this.getAlarmTime());
+        alarmToSay.setMoshiTime();
+        setTimeout(function(){alarmToSay.sayTime();},1250);
+
+  }
+	this.getAlarmTime=function() {
+    						// Get alarm time will grab the alarm time.
+    		return this.alarmTime;
+
+  }
+  this.getAlarmMinute=function(){
+    return this.alarmMinute;
+  }
+  this.getAlarmHour=function(){
+    return this.alarmHour;
+  }
+  this.getAlarmAMPM=function(){
+    return this.alarmAMPM;
+  }
+  this.setAlarmMinute=function(){
+		this.alarmMinute=Math.round(document.getElementById("minuteselect").value);
+	}
+
+	this.setAlarmHour=function(){
+		this.alarmHour=Math.round(document.getElementById("hourselect").value);
+	}
+
+	this.setAlarmAMPM=function(){
+		this.alarmAMPM=document.getElementById("ampmselect").value;
+	}
   this.turnAlarmOn=function() {
     						// Turn alarm on and off enables you to turn on and off the alarm.
   }
   this.turnAlarmOff=function() {
     						//
-  }
-  this.getAlarmTime=function() {
-    						// Get alarm time will grab the alarm time.
   }
   this.checkAlarmTime=function() {
     						// Check alarm time makes it so that it checks the alarm for making different functions work.
@@ -186,7 +230,7 @@ function Moshi()
                 var newCommand=document.getElementById("commands").value;
                 switch(newCommand){
               		case "time":
-              			this.sayTime();
+              			this.sayTime ();
                       $("#popupcontent").hide();
               			break;
               		case "alarm":
@@ -194,7 +238,7 @@ function Moshi()
               			$("#popupcontent").hide();
               			break;
               		case "setalarm":
-              			setAlarmTime();
+              			chooseAlarmTime();
               			$("#popupcontent").hide();
               			break;
               		case "alarmsound":

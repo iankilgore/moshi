@@ -242,7 +242,7 @@
                     <table>
                       <tr>
                         <td>
-                          <select id="hourselect" onchange="setAlarmHour();">
+                          <select id="hourselect">
                             <option value="12">--select--</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -259,7 +259,7 @@
                           </select>
                         </td>
                         <td>
-                          <select id="minuteselect" onchange="setAlarmMinute();">
+                          <select id="minuteselect">
                             <option value="0">--select--</option>
                             <option value="0">00</option>
                             <option value="1">01</option>
@@ -324,7 +324,7 @@
                           </select>
                         </td>
                         <td>
-                          <select id="ampmselect" onchange="setAlarmAMPM();">
+                          <select id="ampmselect">
                             <option value="am">AM</option>
                             <option value="pm">PM</option>
                           </select>
@@ -336,7 +336,7 @@
                         <td>
                         </td>
                         <td>
-                          <center><button onclick="hidePopUpWindow('setalarmmenu');sayAlarmTime();">SET</button></center>
+                          <center><button onclick="test.setAlarmTime();hidePopUpWindow('setalarmmenu');test.sayAlarmTime();">SET</button></center>
                         </td>
                       </tr>
                     </table>

@@ -186,7 +186,7 @@ function Moshi()
                 var newCommand=document.getElementById("commands").value;
                 switch(newCommand){
               		case "time":
-              			sayTime ();
+              			this.sayTime();
                       $("#popupcontent").hide();
               			break;
               		case "alarm":

@@ -56,6 +56,7 @@ function showCustomPopUpWindow(top,left,width,height,PopName){
 
 
 		popUp.style.visibility = "visible";
+		$("#popupcontent").show();
 }
 
 // Alarm functions -------------------------------------------------------------

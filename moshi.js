@@ -213,7 +213,6 @@ function Moshi()
               			$("#popupcontent").hide();
               			$(document).ready(function(){
               				var temperature=document.getElementsByClassName("aw-temperature-today")[0].innerHTML;
-              				alert (temperature);
               				});
               			break;
               		case "nightlight":

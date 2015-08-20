@@ -55,7 +55,7 @@ function Moshi()
     timeIs.src="moshivoice/the_time_is.wav";
     timeIs.play();
     this.setTime();
-    var timeToSay= new MoshiTime(this.getTime(););
+    var timeToSay= new MoshiTime(this.getTime());
     timeToSay.setMoshiTime();
     setTimeout(function(){timeToSay.sayTime();},1250);
 

@@ -165,6 +165,16 @@ function Moshi()
   }
   this.checkAlarmTime=function() {
     						// Check alarm time makes it so that it checks the alarm for making different functions work.
+                var alarmTime = new Date();
+              	alarmTime.setMinutes(alarmMinute);
+              	alarmTime.setHours(alarmHour);
+              	var alarmIsSetTo=document.createElement("AUDIO");
+              	alarmIsSetTo.src="moshivoice/the-alarm-is-set-to.wav";
+              	alarmIsSetTo.play();
+              	var testDate = new Date();
+              	var test= new MoshiTime(alarmTime);
+              	test.setMoshiTime();
+              	setTimeout(function(){test.sayTime();},1250);
   }
   this.getAlarmSound=function() {
     						// Get alarm sound will look at what the alarm sound is at so that when the alarm is set, the correct alarm sound is played.

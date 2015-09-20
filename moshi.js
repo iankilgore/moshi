@@ -169,9 +169,9 @@ function Moshi()
               	alarmTime.setMinutes(alarmMinute);
               	alarmTime.setHours(alarmHour);
               	var alarmIsSetTo=document.createElement("AUDIO");
-              	alarmIsSetTo.src="moshivoice/the-alarm-is-set-to.wav";
+              	// alarmIsSetTo.src="moshivoice/the-alarm-is-set-to.wav";
               	alarmIsSetTo.play();
-              	var testDate = new Date();
+              //	var testDate = new Date();
               	var test= new MoshiTime(alarmTime);
               	test.setMoshiTime();
               	setTimeout(function(){test.sayTime();},1250);

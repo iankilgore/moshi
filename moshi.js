@@ -165,16 +165,22 @@ function Moshi()
   }
   this.checkAlarmTime=function() {
     						// Check alarm time makes it so that it checks the alarm for making different functions work.
-                var alarmTime = new Date();
-              	alarmTime.setMinutes(alarmMinute);
-              	alarmTime.setHours(alarmHour);
-              	var alarmIsSetTo=document.createElement("AUDIO");
-              	// alarmIsSetTo.src="moshivoice/the-alarm-is-set-to.wav";
-              	alarmIsSetTo.play();
-              //	var testDate = new Date();
-              	var test= new MoshiTime(alarmTime);
-              	test.setMoshiTime();
-              	setTimeout(function(){test.sayTime();},1250);
+                if (alarmAMPM=="pm") {
+                    if (alarmHour < 12) {
+                      alarmHour=alarmHour+12;
+                    }
+                }
+                if (this.getCurrentHour() == alarmHour) {
+                  if (this.getCurrentMinute == alarmMinute) {
+                    this.turnAlarmSoundOn();
+                  }
+                }
+  }
+  this.getCurrentHour=function() {
+    return this.getTime().getHours();
+  }
+  this.getCurrentMinute=function() {
+    return this.getTime().getMinutes();
   }
   this.getAlarmSound=function() {
     						// Get alarm sound will look at what the alarm sound is at so that when the alarm is set, the correct alarm sound is played.

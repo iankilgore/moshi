@@ -24,8 +24,14 @@
 // Moshi Weather functions -----------------------------------------------------
 function OpenWeatherWidget()
 {
-	  showCustomPopUpWindow (-300,0,300,300, 'weatherwidget');
-	  weathertimer=setTimeout(function(){hidePopUpWindow('weatherwidget')},6000);
+	  showCustomPopUpWindow (-500,0,300,300, 'temperatureDisplay');
+		$(document).ready(function(){
+			var temperature=document.getElementsByClassName("aw-temperature-today")[0].innerHTML;
+			document.getElementById("temperatureDisplay").innerHTML = temperature;
+			});
+
+	  weathertimer=setTimeout(function(){hidePopUpWindow('temperatureDisplay')},6000);
+
 }
 
 // Moshi Date functions --------------------------------------------------------

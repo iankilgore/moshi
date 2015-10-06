@@ -1,6 +1,11 @@
 <html>
   <head>
     <title></title>
+    <script>
+    function switchDisplay(){
+      document.getElementById("currentDisplay").innerHTML=document.getElementById("clockDisplay").innerHTML;
+    }
+    </script>
     <style>
       #ampmDisplay {
         font-family:"Arial";
@@ -56,10 +61,5 @@
       </tr>
     </table>
   </div>
-  <script>
-  function switchDisplay(){
-    document.getElementById("currentDisplay").innerHTML=document.getElementById("clockDisplay").innerHTML;
-  }
-  </script>
   </body>
 </html>

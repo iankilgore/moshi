@@ -24,10 +24,8 @@
     </style>
   </head>
   <body>
-    <div id="currentDisplay">
-<script>
-document.getElementById("currentDisplay").innerHTML=document.getElementById("clockDisplay").innerHTML;
-</script>
+    <a href="#currentDisplay" onclick="switchDisplay();">click to change</a>
+  <div id="currentDisplay">
   </div>
   <div id="clockDisplay">
     <table border="1">
@@ -58,5 +56,10 @@ document.getElementById("currentDisplay").innerHTML=document.getElementById("clo
       </tr>
     </table>
   </div>
+  <script>
+  function switchDisplay() {
+    document.getElementById("currentDisplay").innerHTML=document.getElementById("clockDisplay").innerHTML;
+  }
+  </script>
   </body>
 </html>

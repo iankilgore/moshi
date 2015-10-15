@@ -1,6 +1,11 @@
 <html>
   <head>
     <title></title>
+    <script>
+    function switchDisplay(){
+      document.getElementById("currentDisplay").innerHTML=document.getElementById("clockDisplay").innerHTML;
+    }
+    </script>
     <style>
       #ampmDisplay {
         font-family:"Arial";
@@ -24,8 +29,8 @@
     </style>
   </head>
   <body>
-    <a href="#currentDisplay" onclick="switchDisplay();">click to change</a>
-  <div id="currentDisplay">
+    <a href="#currentDisplay" onclick="switchDisplay();">click here</a>
+    <div id="currentDisplay">
   </div>
   <div id="clockDisplay">
     <table border="1">

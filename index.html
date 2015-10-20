@@ -16,7 +16,7 @@
  var test=new Moshi();
  </script>
   </head>
-  <body onload="startTime(); onNightLight(); offNightLight();">
+  <body onload="startTime(); onNightLight(); offNightLight(); test.switchDisplay('clockDisplay');">
     <table width=100% height=100% cellpadding=0 cellspacing=0>
       <tr>
         <td valign=top>
@@ -30,65 +30,8 @@
           <center>
             <table border=0>
               <tr>
-                <td align="right" width=33%>
-                  <table cellpadding="10" cellspacing="0" border="0">
-                    <tr>
-                      <td>
-                        <div id="alarmIcon">
-                          <a href="#" title="Alarm On Indicator">
-                            <svg width="40" height="40">
-                              <circle cx="20" cy="20" r="13" stroke="black" stroke-width="2" fill="none" />
-
-                              <line x1="20" y1="20" x2="22" y2="30"  style="stroke:rgb(0,0,0);stroke-width:2" />
-                              <line x1="20" y1="20" x2="26" y2="14" style="stroke:rgb(0,0,0);stroke-width:2" />
-
-                              <path d="M 6 10 q 2 -11 12 -6" stroke="black" stroke-width="1" fill="black" />
-                              <path d="M 34 10 q -2 -11 -12 -6" stroke="black" stroke-width="1" fill="black" />
-                            </svg>
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div id="ampm"></div>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-                <td valign="bottom" align="center" width=33%>
-                  <table cellpadding=10 cellspacing=0 border=0>
-                    <tr>
-                      <td>
-                        <div id="moshitime"></div>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-                <td width=33%>
-                  <table>
-                    <tr>
-                      <td>
-                        <div id="moshidate">
-                          <!-- p> Today's fake date is 5/17/15</p> -->
-                          <p font-size="12">
-                            SUN 	<span id="SUN">
-                              <svg height="21" width="21">
-    	                           <polygon points="20,0 10,10 20,20" style="fill:black;stroke:black;stroke-width:1" />
-                               </svg>
-                             </span><br>
-                             MON<span id="MON"></span><br>
-                             TUE<span id="TUE"></span><br>
-                             WED<span id="WED"></span><br>
-                             THU<span id="THU"></span><br>
-                             FRI<span id="FRI"></span><br>
-                             SAT<span id="SAT"></span><br>
-                           </p>
-
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
+                <td>
+                  <div id="currentDisplay"></div>
                 </td>
               </tr>
               <tr>
@@ -124,10 +67,7 @@
                 <td>
                 </td>
                 <td align="center">
-                  <div id="moshidate">
-                    <p> Today's fake date is 5/17/15</p>
-                    <p class="pos_fixed">SUN<br>MON<br>TUE<br>WED<br>THU<br>FRI<br>SAT</p>
-                  </div>
+
                 </td>
                 <td>
                 </td>
@@ -362,7 +302,7 @@
         </td>
       </tr>
     </table>
-  </body>
+
   <div id="clockDisplay">
     <table border="1">
       <tr>
@@ -382,12 +322,12 @@
               </td>
             </tr>
             <tr>
-              <td><p id="ampmDisplay">PM</p></td>
+              <td><p id="ampm">PM</p></td>
             </tr>
           </table>
         </td>
         <td>
-          <p id="timeDisplay">12:00</p>
+          <p id="moshitime">12:00</p>
         </td>
       </tr>
     </table>
@@ -482,5 +422,5 @@
   setAlarmChoice("alarm_1");
   setSoundChoice("sound_1");
   </script>
-
+  </body>
 </html>

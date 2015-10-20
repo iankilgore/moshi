@@ -108,7 +108,7 @@ right:0;
 	visibility:hidden;
 }
 #clockDisplay {
-	visibility:hidden;
+	visibility:visible;
 }
 #currentDisplay {
 	visibility:visible;

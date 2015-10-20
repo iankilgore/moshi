@@ -22,9 +22,11 @@ function Moshi()
   var alarmTime;
 
   var currentCommand;
+
   this.switchDisplay=function(newDisplay){
     document.getElementById("currentDisplay").innerHTML=document.getElementById(newDisplay).innerHTML;
   }
+  
   this.setTime=function() {
     							// setTime will set the time for a Moshi object.
                   this.currentTime=new Date();

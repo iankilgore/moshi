@@ -94,6 +94,50 @@ right:0;
 	visibility: visible;
 
 }
+#ampmDisplay {
+	font-family:"Arial";
+	font-size:28;
+	color:#000000;
+}
+#timeDisplay {
+	font-family:"Impact";
+	font-size:130;
+	color:#000000;
+}
+#alarmIcon {
+	visibility:hidden;
+}
+#clockDisplay {
+	visibility:hidden;
+}
+#currentDisplay {
+	visibility:visible;
+}
+#dateText {
+	font-family:"Impact";
+	font-size:130;
+	color:#000000;
+}
+#dateDisplay {
+	visibility:hidden;
+}
+#weatherwidget {
+	visibility:hidden;
+}
+#temperatureDisplay {
+	position: relative;
+	font-family:"Impact";
+align:"center";
+font-size: 130;
+color: #000000;
+padding-bottom: 0px;
+}
+
+.daysDisplay {
+ font-family:"Comic Sans MS";
+ font-size:12;
+ color:#000000;
+}
 
 p.pos_fixed {
 	font-family:"Arial Black";

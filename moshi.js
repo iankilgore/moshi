@@ -97,6 +97,13 @@ function Moshi()
 
   this.SayDate=function() {
     						// Say date will say the date just like the time.
+                var dateIs=document.createElement("AUDIO");
+                dateIs.src="moshivoice/today_is.wav";
+                dateIs.play();
+                this.setDate();
+                var dateToSay= new Moshidate(this.getDate());
+                timeToSay.setMoshiDate();
+                setTimeout(function(){dateToSay.sayDate();},1250);
   }
   this.getDay=function() {
     						// Get day i think will get the current day of the week or month.

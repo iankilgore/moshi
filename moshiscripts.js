@@ -26,7 +26,8 @@ function OpenWeatherWidget()
 {
 	  showCustomPopUpWindow (-500,0,300,300, 'temperatureDisplay');
 		$(document).ready(function(){
-			var temperature=document.getElementsByClassName("aw-temperature-today")[0].innerHTML;
+			var temperature="<span id='tempDigits'>" + document.getElementsByClassName("aw-temperature-today")[0].innerHTML +"F</span>";
+			alert(temperature);
 			document.getElementById("temperatureDisplay").innerHTML = temperature;
 			});
 

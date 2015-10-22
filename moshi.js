@@ -23,10 +23,26 @@ function Moshi()
 
   var currentCommand;
 
-  this.switchDisplay=function(newDisplay){
-    document.getElementById("currentDisplay").innerHTML=document.getElementById(newDisplay).innerHTML;
+  this.switchDisplay=function(newDisplay,waitTime){
+    $(document).ready(function(){
+    setTimeout(function(newDisplay){document.getElementById("currentDisplay").innerHTML=document.getElementById(newDisplay).innerHTML;},waitTime);
+  });
   }
-  
+
+  this.OpenWeatherWidget=function()
+  {
+  		$(document).ready(function(){
+  			var temperature="<span id='tempDigits'>" + document.getElementsByClassName("aw-temperature-today")[0].innerHTML +"F</span>";
+  			alert(temperature);
+  			document.getElementById("temperatureDisplay").innerHTML = temperature;
+
+        this.switchDisplay("temperatureDisplay",0);
+        this.switchDisplay("clockDisplay",6000)
+  			});
+
+
+  }
+
   this.setTime=function() {
     							// setTime will set the time for a Moshi object.
                   this.currentTime=new Date();
@@ -287,11 +303,8 @@ function Moshi()
               			$("#popupcontent").hide();
               			break;
               		case "temperature":
-              			OpenWeatherWidget();
+              			this.OpenWeatherWidget();
               			$("#popupcontent").hide();
-              			$(document).ready(function(){
-              				var temperature=document.getElementsByClassName("aw-temperature-today")[0].innerHTML;
-              				});
               			break;
               		case "nightlight":
               			onNightLight();

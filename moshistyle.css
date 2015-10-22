@@ -19,7 +19,7 @@ color: #000000;
 padding-bottom: 0px;
 }
 #temperatureDisplay {
-	position: relative;
+	visibility:hidden;
 	font-family:"Impact";
 align:"center";
 font-size: 130;
@@ -90,10 +90,6 @@ top:0;
 right:0;
 }
 
-#alarmIcon {
-	visibility: visible;
-
-}
 #ampmDisplay {
 	font-family:"Arial";
 	font-size:28;
@@ -108,10 +104,15 @@ right:0;
 	visibility:hidden;
 }
 #clockDisplay {
-	visibility:visible;
+	visibility:hidden;
 }
 #currentDisplay {
 	visibility:visible;
+	font-family:"Impact";
+align:"center";
+font-size: 130;
+color: #000000;
+padding-bottom: 0px;
 }
 #dateText {
 	font-family:"Impact";

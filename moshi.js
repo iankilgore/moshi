@@ -303,9 +303,9 @@ function Moshi()
               			$("#popupcontent").hide();
               			break;
               		case "temperature":
-              			this.OpenWeatherWidget();
-              			$("#popupcontent").hide();
-              			break;
+              		  this.OpenWeatherWidget();
+              	    $("#popupcontent").hide();
+              		  break;
               		case "nightlight":
               			onNightLight();
               			$("#popupcontent").hide();

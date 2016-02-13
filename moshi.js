@@ -22,6 +22,7 @@ function Moshi()
   var alarmTime;
 
   var currentCommand;
+  var nightlight="off";
 
   this.switchDisplay=function(newDisplay,waitTime){
     $(document).ready(function(){
@@ -307,8 +308,16 @@ function Moshi()
               	    $("#popupcontent").hide();
               		  break;
               		case "nightlight":
-              			onNightLight();
+                    if (nightlight=="off") {
+                    onNightLight();
+                    nightlight="on";
               			$("#popupcontent").hide();
+                    }
+                    else {
+                    offNightLight();
+                    nightlight="off";
+                    $("#popupcontent").hide();
+                    }
               			break;
               	}
   }

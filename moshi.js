@@ -51,7 +51,6 @@ function Moshi()
 
   this.getTime=function() {
     							// getTime will return the current time stored in the Moshi object.
-
                   return this.currentTime;
   }
 
@@ -154,7 +153,7 @@ function Moshi()
         var alarmIsSetTo=document.createElement("AUDIO");
         alarmIsSetTo.src="moshivoice/the-alarm-is-set-to.wav";
         alarmIsSetTo.play();
-
+        alert (this.alarmTime);
         var alarmToSay= new MoshiTime(this.getAlarmTime());
         alarmToSay.setMoshiTime();
         setTimeout(function(){alarmToSay.sayTime();},1250);
@@ -278,7 +277,7 @@ function Moshi()
                     $("#popupcontent").hide();
               			break;
               		case "alarm":
-              			this.sayAlarmTime();
+              			sayAlarmTime();
               			$("#popupcontent").hide();
               			break;
               		case "setalarm":

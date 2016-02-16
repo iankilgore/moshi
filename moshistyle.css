@@ -59,7 +59,7 @@ padding-bottom: 0px;
 #AlarmMenu {
 	font-family:"Arial";
 	position: static;
-	top:-200px;
+	top:-800px;
 	visibility: hidden;
 	overflow: hidden;
 	background-color: none;
@@ -68,7 +68,7 @@ padding-bottom: 0px;
 #sleepsoundMenu {
 	font-family:"Arial";
 	position: static;
-	top:-200px;
+	top:-400px;
 	visibility: hidden;
 	overflow: hidden;
 	background-color: none;

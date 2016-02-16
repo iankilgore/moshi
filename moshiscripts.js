@@ -61,14 +61,14 @@ function chooseAlarmSound() {
 	var alarmSoundSet=document.createElement("AUDIO");
 	alarmSoundSet.src="moshivoice/to_choose_an_alarm_sound.wav";
 	alarmSoundSet.play();
-	showCustomPopUpWindow(200,200,200,200,"AlarmMenu")
+	showCustomPopUpWindow(200,200,200,200,"AlarmMenu");
 }
 
 function chooseSleepSound() {
 	var sleepSoundSet=document.createElement("AUDIO");
 	sleepSoundSet.src="moshivoice/to_choose_a_sleep_sound.wav";
 	sleepSoundSet.play();
-	showCustomPopUpWindow(200,200,200,200,"sleepsoundMenu")
+	showCustomPopUpWindow(200,200,200,200,"sleepsoundMenu");
 }
 
 function setAlarmChoice(choice) {

@@ -219,3 +219,13 @@ function offNightLight(){
 	slide_element.innerHTML = "<style>body {background-color: #605a39;}</style>"
 	return;
 }
+
+function OpenWeatherWidget()
+  {
+  showCustomPopUpWindow (-500,0,300,300, 'temperatureDisplay');
+	$(document).ready(function(){
+ 	var temperature=document.getElementsByClassName("aw-temperature-today")[0].innerHTML;
+ 	document.getElementById("temperatureDisplay").innerHTML = temperature;
+ 	});
+  weathertimer=setTimeout(function(){hidePopUpWindow('temperatureDisplay')},6000);
+  }

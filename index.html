@@ -31,7 +31,7 @@
             <table border=0>
               <tr>
                 <td align="right" width=33%>
-                  <table cellpadding="10" cellspacing="0" border="0">
+                  <table cellpadding="10" cellspacing="0" border="1">
                     <tr>
                       <td>
                         <div id="alarmIcon">
@@ -72,19 +72,42 @@
                         <div id="moshidate">
                           <!-- p> Today's fake date is 5/17/15</p> -->
                           <p font-size="12">
-                            SUN 	<span id="SUN">
-                              <svg height="21" width="21">
-    	                           <polygon points="20,0 10,10 20,20" style="fill:black;stroke:black;stroke-width:1" />
-                               </svg>
-                             </span><br>
-                             MON<span id="MON"></span><br>
-                             TUE<span id="TUE"></span><br>
-                             WED<span id="WED"></span><br>
-                             THU<span id="THU"></span><br>
-                             FRI<span id="FRI"></span><br>
-                             SAT<span id="SAT"></span><br>
+                            <table>
+                              <tr>
+                                <td><span id="SUN"></span><td>
+                                <td>SUN</td>
+                              </tr>
+                              <tr>
+                                <td><span id="MON"></span><td>
+                                <td>MON</td>
+                              </tr>
+                              <tr>
+                                <td><span id="TUE"></span><td>
+                                <td>TUE</td>
+                              </tr>
+                              <tr>
+                                <td><span id="WED"></span><td>
+                                <td>WED</td>
+                              </tr>
+                              <tr>
+                                <td><span id="THU"></span><td>
+                                <td>THU</td>
+                              </tr>
+                              <tr>
+                                <td><span id="FRI"></span><td>
+                                <td>FRI</td>
+                              </tr>
+                              <tr>
+                                <td><span id="SAT"></span><td>
+                                <td>SAT</td>
+                              </tr>
+                            </table>
                            </p>
-
+                           <span id="datearrow" style="visibility:hidden;">
+                             <svg height="11" width="11">
+                              <polygon points="0,0 10,6 0,11" style="fill:black;stroke:black;stroke-width:1" />
+                             </svg>
+                          </span>
                         </div>
                       </td>
                     </tr>
@@ -99,7 +122,7 @@
                     <p>
                       Welcome, command please.
                       <select id="commands" onchange="test.acceptCommand();">
-                        <option value="--SELECT--">--SELECT COMMAND--</option>
+                        <option value="COMMAND">--SELECT COMMAND--</option>
                         <option value="time">Time</option>
                         <option value="alarm">Alarm</option>
                         <option value="setalarm">Set Alarm</option>
@@ -115,18 +138,6 @@
                     <audio id="myAudio">
                       <source src="command_please.wav" type="audio/wav">
                     </audio>
-                  </div>
-                </td>
-                <td>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                </td>
-                <td align="center">
-                  <div id="moshidate">
-                    <p> Today's fake date is 5/17/15</p>
-                    <p class="pos_fixed">SUN<br>MON<br>TUE<br>WED<br>THU<br>FRI<br>SAT</p>
                   </div>
                 </td>
                 <td>

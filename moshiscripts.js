@@ -27,7 +27,25 @@
 // Moshi Date functions --------------------------------------------------------
 function showMoshiDate()
 {
-	d = new Date();
+	var d = new Date();
+  var n = d.getDay();
+	switch (n) {
+		case 1: document.getElementById("MON").innerHTML=document.getElementById("datearrow").innerHTML;
+		break;
+		case 2: document.getElementById("TUE").innerHTML=document.getElementById("datearrow").innerHTML;
+		break;
+		case 3: document.getElementById("WED").innerHTML=document.getElementById("datearrow").innerHTML;
+		break;
+		case 4: document.getElementById("THU").innerHTML=document.getElementById("datearrow").innerHTML;
+		break;
+		case 5: document.getElementById("FRI").innerHTML=document.getElementById("datearrow").innerHTML;
+		break;
+		case 6: document.getElementById("SAT").innerHTML=document.getElementById("datearrow").innerHTML;
+		break;
+		case 7: document.getElementById("SUN").innerHTML=document.getElementById("datearrow").innerHTML;
+		break;
+	}
+
 	showCustomPopUpWindow (-400,-400,200,200, 'moshidate')
 	setTimeout(function(){hidePopUpWindow('moshidate')},10000);
 }
@@ -58,7 +76,7 @@ function showCustomPopUpWindow(top,left,width,height,PopName){
 // Alarm functions -------------------------------------------------------------
 
 function chooseAlarmSound() {
-	var alarmSoundSet=document.createElement("AUDIO");
+	var alarmSoundSet=document.createElement("AUDIO")
 	alarmSoundSet.src="moshivoice/to_choose_an_alarm_sound.wav";
 	alarmSoundSet.play();
 	showCustomPopUpWindow(200,200,200,200,"AlarmMenu");

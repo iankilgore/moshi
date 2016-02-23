@@ -271,6 +271,7 @@ function Moshi()
   this.acceptCommand=function() {
     						// Accept command will look at the command you chose.
                 var newCommand=document.getElementById("commands").value;
+                document.getElementById("commands").value="COMMAND";
                 switch(newCommand){
               		case "time":
               			this.sayTime();

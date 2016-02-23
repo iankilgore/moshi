@@ -96,7 +96,7 @@ function MoshiTime(dateObject)
 
           switch (this.ones) {
           case 0 :
-          sayOnesMinute.src="moshivoice/oh.wav";
+          sayOnesMinute.src="moshivoice/blank.wav";
           break;
           case 1 :
           sayOnesMinute.src="moshivoice/1.wav";
@@ -134,7 +134,7 @@ function MoshiTime(dateObject)
       sayTensMinute.src="moshivoice/oh.wav";
       break;
       case 1 :
-      sayTensMinute.src="moshivoice/oh.wav";
+      sayTensMinute.src="moshivoice/blank.wav";
       break;
       case 2 :
       sayTensMinute.src="moshivoice/20.wav";

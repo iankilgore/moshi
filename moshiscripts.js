@@ -109,7 +109,14 @@ function checkAlarm(){
 		}
     if (currentHour == alarmHour) {
  			if (currentMinute == alarmMinute) {
+				if (currentHour == 12) {
+					if (alarmAMPM != "am") {
+					AlarmChoice.play();
+					}
+
+				} else {
 				AlarmChoice.play();
+				}
 			}
 		}
 }
@@ -132,7 +139,10 @@ function chooseAlarmTime(){
 	var alarmSet=document.createElement("AUDIO");
 	alarmSet.src="moshivoice/alarm-to-sound.wav";
 	alarmSet.play();
-	showCustomPopUpWindow (-531,0,300,100, 'setalarmmenu')
+	showCustomPopUpWindow (-531,0,300,100, 'setalarmmenu');
+}
+function showAlarmIcon(){
+	document.getElementById("alarmIcon").style.visibility="visible";
 }
 
 function setAlarmMinute(){
@@ -145,6 +155,7 @@ function setAlarmHour(){
 
 function setAlarmAMPM(){
 	alarmAMPM=document.getElementById("ampmselect").value;
+	alert (alarmAMPM);
 }
 
 // Time functions --------------------------------------------------------------

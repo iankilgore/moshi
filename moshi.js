@@ -192,16 +192,16 @@ function Moshi()
   }
   this.checkAlarmTime=function() {
     						// Check alarm time makes it so that it checks the alarm for making different functions work.
-                if (alarmAMPM=="pm") {
-                    if (alarmHour < 12) {
-                      alarmHour=alarmHour+12;
-                    }
-                }
-                if (this.getCurrentHour() == alarmHour) {
-                  if (this.getCurrentMinute == alarmMinute) {
-                    this.turnAlarmSoundOn();
-                  }
-                }
+                //if (alarmAMPM=="pm") {
+                  //  if (alarmHour < 12) {
+                    //  alarmHour=alarmHour+12;
+                    //}
+                //}
+                //if (this.getCurrentHour() == alarmHour) {
+                  //if (this.getCurrentMinute == alarmMinute) {
+                    //this.turnAlarmSoundOn();
+                  //}
+                //}
   }
   this.getCurrentHour=function() {
     return this.getTime().getHours();

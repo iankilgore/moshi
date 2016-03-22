@@ -15,9 +15,7 @@
 	var alarmHour;
 	var alarmMinute;
 	var alarmAMPM;
-	var AlarmChoice;
 	var SoundChoice;
-	setAlarmChoice("alarm_1");
 	setSoundChoice("sound_1");
 
 
@@ -75,12 +73,6 @@ function showCustomPopUpWindow(top,left,width,height,PopName){
 
 // Alarm functions -------------------------------------------------------------
 
-function chooseAlarmSound() {
-	var alarmSoundSet=document.createElement("AUDIO")
-	alarmSoundSet.src="moshivoice/to_choose_an_alarm_sound.wav";
-	alarmSoundSet.play();
-	showCustomPopUpWindow(200,200,200,200,"AlarmMenu");
-}
 
 function chooseSleepSound() {
 	var sleepSoundSet=document.createElement("AUDIO");
@@ -89,9 +81,6 @@ function chooseSleepSound() {
 	showCustomPopUpWindow(200,200,200,200,"sleepsoundMenu");
 }
 
-function setAlarmChoice(choice) {
-	AlarmChoice = document.getElementById(choice);
-}
 
 function setSoundChoice(choice) {
 	SoundChoice = document.getElementById(choice);
@@ -111,11 +100,11 @@ function checkAlarm(){
  			if (currentMinute == alarmMinute) {
 				if (currentHour == 12) {
 					if (alarmAMPM != "am") {
-					AlarmChoice.play();
+					myMoshi.alarmSound.play();
 					}
 
 				} else {
-				AlarmChoice.play();
+				myMoshi.alarmSound.play();
 				}
 			}
 		}

@@ -4,8 +4,8 @@ function Moshi()
   var currentDate;
   var currentDay;
   var ampm;
-
-  var sleepSound;
+  var sleepSound=document.createElement("AUDIO");
+  this.sleepSound.src="sleep_sound_1.mp3";
 	var sleepSoundOnOff;
 
   var faceOnOff;
@@ -17,7 +17,7 @@ function Moshi()
   var alarmHour;
   var alarmMinute;
   var alarmAMPM;
-  var alarmSound;
+  var alarmSound="alarm_1";
 	var alarmOnOff;
   var alarmTime;
 
@@ -42,6 +42,30 @@ function Moshi()
   			});
 
 
+  }
+
+  this.chooseAlarmSound=function() {
+  	var alarmSoundSet=document.createElement("AUDIO")
+  	alarmSoundSet.src="moshivoice/to_choose_an_alarm_sound.wav";
+  	alarmSoundSet.play();
+  	showCustomPopUpWindow(200,200,200,200,"AlarmMenu");
+
+  }
+
+  this.chooseSleepSound=function() {
+  	var sleepSoundSet=document.createElement("AUDIO");
+  	sleepSoundSet.src="moshivoice/to_choose_a_sleep_sound.wav";
+  	sleepSoundSet.play();
+  	showCustomPopUpWindow(200,200,200,200,"sleepsoundMenu");
+  }
+
+  this.setSleepSound=function(choice) {
+  	this.sleepSound = document.getElementById(choice);
+  }
+
+  this.setAlarmSound=function(choice) {
+    						// Set alarm sound will be triggered when you select an alarm sound.
+                	this.alarmSound = document.getElementById(choice);
   }
 
   this.setTime=function() {
@@ -212,8 +236,9 @@ function Moshi()
   this.getAlarmSound=function() {
     						// Get alarm sound will look at what the alarm sound is at so that when the alarm is set, the correct alarm sound is played.
   }
-  this.setAlarmSound=function() {
+  this.setAlarmSound=function(choice) {
     						// Set alarm sound will be triggered when you select an alarm sound.
+                	this.alarmSound = document.getElementById(choice);
   }
   this.turnAlarmSoundOn=function() {
     						// Not sure what Turn alarm sound on and off do exactly.
@@ -286,17 +311,18 @@ function Moshi()
               			$("#popupcontent").hide();
               			break;
               		case "alarmsound":
-              			chooseAlarmSound();
+              			this.chooseAlarmSound();
               			$("#popupcontent").hide();
               			break;
               		case "sleepsound":
-              			chooseSleepSound();
+              			this.chooseSleepSound();
               			$("#popupcontent").hide();
               			break;
               		case "playsleepsound":
-              			SoundChoice.play();
-              			onNightLight();
-              			setTimeout(function(){offNightLight();blackbrown('on');},300000);
+                  alert (this.sleepSound);
+              			this.sleepSound.play();
+              			//onNightLight();
+              		//	setTimeout(function(){offNightLight();blackbrown('on');},300000);
               			$("#popupcontent").hide();
               			break;
               		case "moshidate":
@@ -320,12 +346,6 @@ function Moshi()
                     }
               			break;
               	}
-  }
-  this.displayDialogBox=function() {
-    						// Display dialog box will display the command dialog box.
-  }
-  this.hideDialogBox=function() {
-    						// Hide dialog box is triggered when you select a command.
   }
 
 }

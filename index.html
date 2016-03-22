@@ -13,7 +13,7 @@
 <script src="jquery-1.12.0.min.js"></script>
 <script src="moshi.js"></script>
 <script>
- var test=new Moshi();
+ var myMoshi=new Moshi();
  </script>
   </head>
   <body onload="startTime(); onNightLight(); offNightLight();">
@@ -21,8 +21,7 @@
       <tr>
         <td valign=top>
           <div id="nightlight"></div>
-          <a href="#" onclick="myAudio.play(); showCustomPopUpWindow(200,200,300,100,'popupcontent');" >Hello, Moshi.</a>
-          <!--<a href="#" onclick="offNightLight();" >Night Light Off</a>-->
+          <a href="#" onclick="offNightLight(); myAudio.play(); showCustomPopUpWindow(200,200,300,100,'popupcontent');" >Hello, Moshi.</a>
           <br>
           <br>
           <br>
@@ -121,7 +120,7 @@
                   <div id="popupcontent">
                     <p>
                       Welcome, command please.
-                      <select id="commands" onchange="test.acceptCommand();">
+                      <select id="commands" onchange="myMoshi.acceptCommand();">
                         <option value="COMMAND">--SELECT COMMAND--</option>
                         <option value="time">Time</option>
                         <option value="alarm">Alarm</option>
@@ -161,17 +160,17 @@
                       <audio id="alarm_1_sample">
                         <source src="alarm_1_sample.wav" type="audio/wav">
                       </audio>
-                      <a href="#SoundMenuChoice" onclick="alarm_1_sample.play(); setAlarmChoice('alarm_1'); hidePopUpWindow('AlarmMenu');">Alarm 1</a>
+                      <a href="#SoundMenuChoice" onclick="alarm_1_sample.play(); myMoshi.setAlarmSound('alarm_1'); hidePopUpWindow('AlarmMenu');">Alarm 1</a>
                       <br>
                       <audio id="alarm_2_sample">
                         <source src="alarm_2_sample.wav" type="audio/wav">
                       </audio>
-                      <a href="#SoundMenuChoice" onclick="alarm_2_sample.play(); setAlarmChoice('alarm_2'); hidePopUpWindow('AlarmMenu');">Alarm 2</a>
+                      <a href="#SoundMenuChoice" onclick="alarm_2_sample.play(); myMoshi.setAlarmSound('alarm_2'); hidePopUpWindow('AlarmMenu');">Alarm 2</a>
                       <br>
                       <audio id="alarm_3_sample">
                         <source src="alarm_3_sample.wav" type="audio/wav">
                       </audio>
-                      <a href="#SoundMenuChoice" onclick="alarm_3_sample.play(); setAlarmChoice('alarm_3'); hidePopUpWindow('AlarmMenu');">Alarm 3</a>
+                      <a href="#SoundMenuChoice" onclick="alarm_3_sample.play(); myMoshi.setAlarmSound('alarm_3'); hidePopUpWindow('AlarmMenu');">Alarm 3</a>
                       <br>
                     </p>
                   </div>
@@ -197,17 +196,17 @@
                       <audio id="sound_1_sample">
                         <source src="sound_1_sample.wav" type="audio/wav">
                       </audio>
-                      <a href="#SoundMenuChoice" onclick="sound_1_sample.play(); setSoundChoice('sound_1'); hidePopUpWindow('sleepsoundMenu');">Sound 1</a>
+                      <a href="#SoundMenuChoice" onclick="sound_1_sample.play(); myMoshi.setSleepSound('sound_1'); hidePopUpWindow('sleepsoundMenu');">Sound 1</a>
                       <br>
                       <audio id="sound_2_sample">
                         <source src="sound_2_sample.wav" type="audio/wav">
                       </audio>
-                      <a href="#SoundMenuChoice" onclick="sound_2_sample.play(); setSoundChoice('sound_2'); hidePopUpWindow('sleepsoundMenu');">Sound 2</a>
+                      <a href="#SoundMenuChoice" onclick="sound_2_sample.play(); myMoshi.setSleepSound('sound_2'); hidePopUpWindow('sleepsoundMenu');">Sound 2</a>
                       <br>
                       <audio id="sound_3_sample">
                         <source src="sound_3_sample.wav" type="audio/wav">
                       </audio>
-                      <a href="#SoundMenuChoice" onclick="sound_3_sample.play(); setSoundChoice('sound_3'); hidePopUpWindow('sleepsoundMenu');">Sound 3</a>
+                      <a href="#SoundMenuChoice" onclick="sound_3_sample.play(); myMoshi.setSleepSound('sound_3'); hidePopUpWindow('sleepsoundMenu');">Sound 3</a>
                       <br>
                     </p>
                   </div>
@@ -374,11 +373,5 @@
       </tr>
     </table>
   </body>
-  <script>
-  var AlarmChoice;
-  var SoundChoice;
-  setAlarmChoice("alarm_1");
-  setSoundChoice("sound_1");
-  </script>
 
 </html>

@@ -142,7 +142,7 @@ function Moshi()
 
 
 				this.setAlarmMinute();
-    		this.setAlarmHour();
+  		  this.setAlarmHour();
     		this.setAlarmAMPM();
         this.alarmTime = new Date();
         this.alarmTime.setMinutes(this.getAlarmMinute());

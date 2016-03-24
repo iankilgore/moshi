@@ -257,7 +257,7 @@
                     <table>
                       <tr>
                         <td>
-                          <select id="hourselect" onchange="setAlarmHour();">
+                          <select id="hourselect" onchange="myMoshi.setAlarmHour();">
                             <option value="12">--select--</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -274,7 +274,7 @@
                           </select>
                         </td>
                         <td>
-                          <select id="minuteselect" onchange="setAlarmMinute();">
+                          <select id="minuteselect" onchange="myMoshi.setAlarmMinute();">
                             <option value="0">--select--</option>
                             <option value="0">00</option>
                             <option value="1">01</option>
@@ -339,7 +339,7 @@
                           </select>
                         </td>
                         <td>
-                          <select id="ampmselect" onchange="setAlarmAMPM();">
+                          <select id="ampmselect" onchange="myMoshi.setAlarmAMPM();">
                             <option value="am">AM</option>
                             <option value="pm">PM</option>
                           </select>
@@ -351,7 +351,7 @@
                         <td>
                         </td>
                         <td>
-                          <center><button onclick="hidePopUpWindow('setalarmmenu');sayAlarmTime();showAlarmIcon();">SET</button></center>
+                          <center><button onclick="hidePopUpWindow('setalarmmenu');myMoshi.setAlarmTime();myMoshi.sayAlarmTime();showAlarmIcon();">SET</button></center>
                         </td>
                       </tr>
                     </table>

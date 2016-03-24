@@ -15,8 +15,6 @@
 	var alarmHour;
 	var alarmMinute;
 	var alarmAMPM;
-	var SoundChoice;
-	setSoundChoice("sound_1");
 
 
 // Moshi Weather functions -----------------------------------------------------
@@ -74,18 +72,6 @@ function showCustomPopUpWindow(top,left,width,height,PopName){
 // Alarm functions -------------------------------------------------------------
 
 
-function chooseSleepSound() {
-	var sleepSoundSet=document.createElement("AUDIO");
-	sleepSoundSet.src="moshivoice/to_choose_a_sleep_sound.wav";
-	sleepSoundSet.play();
-	showCustomPopUpWindow(200,200,200,200,"sleepsoundMenu");
-}
-
-
-function setSoundChoice(choice) {
-	SoundChoice = document.getElementById(choice);
-}
-
 function checkAlarm(){
 		var time = new Date().getHours();
     var currentTime = new Date();
@@ -110,41 +96,9 @@ function checkAlarm(){
 		}
 }
 
-function sayAlarmTime() {
-	var alarmTime = new Date();
-	alarmTime.setMinutes(alarmMinute);
-	alarmTime.setHours(alarmHour);
-	var alarmIsSetTo=document.createElement("AUDIO");
-	alarmIsSetTo.src="moshivoice/the-alarm-is-set-to.wav";
-	alarmIsSetTo.play();
-	var testDate = new Date();
-	var test= new MoshiTime(alarmTime);
-	test.setMoshiTime();
-	setTimeout(function(){test.sayTime();},1250);
-
-}
 // set alarm functions -------------------------------------------------------
-function chooseAlarmTime(){
-	var alarmSet=document.createElement("AUDIO");
-	alarmSet.src="moshivoice/alarm-to-sound.wav";
-	alarmSet.play();
-	showCustomPopUpWindow (-531,0,300,100, 'setalarmmenu');
-}
 function showAlarmIcon(){
 	document.getElementById("alarmIcon").style.visibility="visible";
-}
-
-function setAlarmMinute(){
-	alarmMinute=Math.round(document.getElementById("minuteselect").value);
-}
-
-function setAlarmHour(){
-	alarmHour=Math.round(document.getElementById("hourselect").value);
-}
-
-function setAlarmAMPM(){
-	alarmAMPM=document.getElementById("ampmselect").value;
-	alert (alarmAMPM);
 }
 
 // Time functions --------------------------------------------------------------

@@ -19,14 +19,13 @@ function MoshiTime(dateObject)
   this.setAMPM= function()
  				 						{
                       var tempAMPM="am";
-											alert (tempAMPM);
 
 
                       if (this.hour >= 12)
                         {
 													if (this.hour > 12)
 													{
-														this.hour=this.hour-12;	
+														this.hour=this.hour-12;
 													}
 
                           tempAMPM="pm";
@@ -38,7 +37,6 @@ function MoshiTime(dateObject)
 														tempAMPM="am";
 												}
 											this.ampm = tempAMPM;
-											alert (this.ampm);
   									}
 
   this.setMoshiTime= function()

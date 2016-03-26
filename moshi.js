@@ -23,6 +23,21 @@ function Moshi()
   var currentCommand;
   var nightlight="off";
 
+  this.onNightLight=function(){
+  	if (offon != "on") {
+  	offon="on";
+  	slide_element = document.getElementById("nightlight");
+  	switchSlide();
+  	}
+  }
+
+  this.offNightLight=function(){
+  	offon="off";
+  	slide_counter = 0;
+  	slide_element.innerHTML = "<style>body {background-color: #605a39;}</style>"
+  	return;
+  }
+
   this.switchDisplay=function(newDisplay,waitTime){
     $(document).ready(function(){
     setTimeout(function(newDisplay){document.getElementById("currentDisplay").innerHTML=document.getElementById(newDisplay).innerHTML;},waitTime);
@@ -128,7 +143,7 @@ function Moshi()
   var alarmSet=document.createElement("AUDIO");
   alarmSet.src="moshivoice/alarm-to-sound.wav";
   alarmSet.play();
-  showCustomPopUpWindow (-531,0,300,100, 'setalarmmenu');  
+  showCustomPopUpWindow (-531,0,300,100, 'setalarmmenu');
   }
 
   this.setAlarmTime=function() {

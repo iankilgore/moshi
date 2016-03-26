@@ -177,21 +177,6 @@ if (offon=="off") {
 		  }
 }
 
-function onNightLight(){
-	if (offon != "on") {
-	offon="on";
-	slide_element = document.getElementById("nightlight");
-	switchSlide();
-	}
-}
-
-function offNightLight(){
-	offon="off";
-	slide_counter = 0;
-	slide_element.innerHTML = "<style>body {background-color: #605a39;}</style>"
-	return;
-}
-
 function OpenWeatherWidget()
   {
   showCustomPopUpWindow (-500,0,300,300, 'temperatureDisplay');

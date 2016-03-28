@@ -23,20 +23,6 @@ function Moshi()
   var currentCommand;
   var nightlight="off";
 
-  this.onNightLight=function(){
-  	if (offon != "on") {
-  	offon="on";
-  	slide_element = document.getElementById("nightlight");
-  	switchSlide();
-  	}
-  }
-
-  this.offNightLight=function(){
-  	offon="off";
-  	slide_counter = 0;
-  	slide_element.innerHTML = "<style>body {background-color: #605a39;}</style>"
-  	return;
-  }
 
   this.switchDisplay=function(newDisplay,waitTime){
     $(document).ready(function(){

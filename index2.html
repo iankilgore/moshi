@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>
+      Moshi Simulator
+    </title>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="stylesheet" href="moshistyle.css">
+    <script src="moshiscripts.js"></script>
+    <script src="moshi_talk.js"></script>
+    <script src="jquery-1.12.0.min.js"></script>
+    <script src="moshi.js"></script>
+    <script>
+      var myMoshi=new Moshi();
+    </script>
+    <script>
+      function switchDisplay(newDisplay){
+        document.getElementById("currentDisplay").innerHTML=document.getElementById(newDisplay).innerHTML;
+      }
+    </script>
+    <style>
+    #mainDisplay {
+      text-align : center;
+      color: red;
+    }
+    #menuDisplay {
+      text-align : center;
+      color: green;
+    }
+    </style>
+  </head>
+  <body onload="startTime();">
+    <div id="mainDisplay">main display</div>
+    <div id="menuDisplay">menu display</div>
+  </body>
+</html>
